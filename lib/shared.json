@@ -1,0 +1,215 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Shared OpenAPI components",
+        "version": "1.0"
+    },
+    "components": {
+        "responses": {
+            "401": {
+                "description": "This response indicates that request lacks valid authentication credentials. Access token might not been provided, issued by the wrong issuer, does not have required scopes or request headers were malformed.",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/ErrorResponse"
+                        },
+                        "examples": {
+                            "HeaderNotFound": {
+                                "value": {
+                                    "error": {
+                                        "code": "HeaderNotFound",
+                                        "message": "Header Authorization was not found in the request. Access denied."
+                                    }
+                                }
+                            },
+                            "InvalidAuthorizationScheme": {
+                                "value": {
+                                    "error": {
+                                        "code": "InvalidAuthorizationScheme",
+                                        "message": "Authorization scheme 'Bearer' is not valid."
+                                    }
+                                }
+                            },
+                            "InvalidHeaderValue": {
+                                "value": {
+                                    "error": {
+                                        "code": "InvalidHeaderValue",
+                                        "message": "Authorization header is empty."
+                                    }
+                                }
+                            },
+                            "RequiredScopeMissing": {
+                                "value": {
+                                    "error": {
+                                        "code": "RequiredScopeMissing",
+                                        "message": "Access denied due to invalid access_token. One or more required scopes are missing. Make sure to provide a valid token for this API endpoint."
+                                    }
+                                }
+                            },
+                            "Unauthorized": {
+                                "value": {
+                                    "error": {
+                                        "code": "Unauthorized",
+                                        "message": "Access denied due to invalid client. Make sure that client was registered on https://developer.bentley.com."
+                                    }
+                                }
+                            },
+                            "InvalidApplicationTier": {
+                                "value": {
+                                    "error": {
+                                        "code": "InvalidApplicationTier",
+                                        "message": "The application is not allowed to access this API."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "429": {
+                "description": "This response indicates that the user has sent too many requests in a given amount of time.",
+                "headers": {
+                    "retry-after": {
+                        "description": "The number of requests exceeds the rate-limit for the client subscription.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/ErrorResponse"
+                        },
+                        "example": {
+                            "error": {
+                                "code": "TooManyRequests",
+                                "message": "More requests were received than the subscription rate-limit allows."
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "parameters": {
+            "AuthParameter": {
+                "name": "Authorization",
+                "in": "header",
+                "description": "OAuth access token with `itwin-platform` scope",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            "AcceptParameter": {
+                "name": "Accept",
+                "in": "header",
+                "description": "Setting to `application/vnd.bentley.itwin-platform.v1+json` is recommended.",
+                "required": true,
+                "schema": {
+                    "enum": [
+                        "application/vnd.bentley.itwin-platform.v1+json"
+                    ],
+                    "type": "string"
+                }
+            }
+        },
+        "schemas": {
+            "Error": {
+                "required": [
+                    "code",
+                    "message"
+                ],
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "One of a server-defined set of error codes."
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "A human-readable representation of the error."
+                    },
+                    "target": {
+                        "type": "string",
+                        "description": "The target of the error.",
+                        "nullable": true
+                    }
+                },
+                "description": "Contains error information."
+            },
+            "ErrorResponse": {
+                "title": "Error Response",
+                "required": [
+                    "error"
+                ],
+                "type": "object",
+                "properties": {
+                    "error": {
+                        "$ref": "#/components/schemas/Error"
+                    }
+                },
+                "description": "Gives details for an error that occurred while handling the request. Note that clients MUST NOT assume that every failed request will produce an object of this schema, or that all of the properties in the response will be non-null, as the error may have prevented this response from being constructed."
+            },
+            "ErrorDetails": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "message": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "target": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "ErrorResponseModel": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "message": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "details": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ErrorDetails"
+                        },
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "ErrorResponseModelWrapper": {
+                "type": "object",
+                "properties": {
+                    "error": {
+                        "$ref": "#/components/schemas/ErrorResponseModel"
+                    }
+                },
+                "additionalProperties": false,
+                "example": {
+                    "HeaderNotFound": {
+                        "value": {
+                            "error": {
+                                "code": "HeaderNotFound",
+                                "message": "Header Authorization was not found in the request. Access denied."
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
