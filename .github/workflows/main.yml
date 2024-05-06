@@ -1,0 +1,12 @@
+name: Main merge check
+on:
+  pull_request_target:
+    branches: preview/**
+    types: [opened, reopened]
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo branch
+        run: echo "${{ github.event.base_ref }}"
