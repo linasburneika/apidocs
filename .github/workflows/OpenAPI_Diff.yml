@@ -34,5 +34,5 @@ jobs:
       - name: Run OpenAPI Diff (from HEAD revision)
         uses: mvegter/openapi-diff-action@v0.23.5
         with:
-          head-spec: head/API/users/userSearch.yaml
-          base-spec: base/API/users/userSearch.yaml
+          head-spec: head/API/users/v1/users.yaml
+          base-spec: base/API/users/v1/users.yaml
