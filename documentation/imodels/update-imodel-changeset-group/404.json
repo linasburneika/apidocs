@@ -1,0 +1,19 @@
+{
+    "statusCode": 404,
+    "description": "Specified iModel or Changeset Group was not found.",
+    "headers": [],
+    "representations": [
+        {
+            "contentType": "application/json;iModelNotFound",
+            "sample": "iModelNotFound",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        },
+        {
+            "contentType": "application/json;ChangesetGroupNotFound",
+            "sample": "ChangesetGroupNotFound",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        }
+    ]
+  }

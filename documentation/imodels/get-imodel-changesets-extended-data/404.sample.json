@@ -1,0 +1,6 @@
+{
+    "error": {
+        "code": "iModelNotFound",
+        "message": "Requested iModel is not available."
+    }
+}

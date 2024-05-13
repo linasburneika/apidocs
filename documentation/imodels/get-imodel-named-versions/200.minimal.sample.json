@@ -1,0 +1,28 @@
+{
+    "namedVersions": [
+        {
+            "id": "1083a893-0f60-4918-8fb0-c3feebf84d6a",
+            "displayName": "Solar farm design",
+            "changesetId": "9913e22a00eb1086c6be0ed3d09e692738fdfe9d",
+            "changesetIndex": 11
+        },
+        {
+            "id": "3020441b-e179-4334-a59a-4fb8deb93df1",
+            "displayName": "Wind farm design",
+            "changesetId": "1f2e04b666edce395e37a795e2231e995cbf8349",
+            "changesetIndex": 14
+        }
+    ],
+    "_links":
+    {
+        "self": {
+            "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/namedversions?$skip=0&$top=100"
+        },
+        "prev": {
+            "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/namedversions?$skip=0&$top=100"
+        },
+        "next": {
+            "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/namedversions?$skip=100&$top=100"
+        }
+    }
+}

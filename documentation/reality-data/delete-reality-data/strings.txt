@@ -1,0 +1,2 @@
+scope=realitydata:modify
+permission=RDS_MANAGE

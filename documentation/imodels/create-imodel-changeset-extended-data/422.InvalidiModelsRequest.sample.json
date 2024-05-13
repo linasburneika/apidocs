@@ -1,0 +1,18 @@
+{
+    "error": {
+        "code": "InvalidiModelsRequest",
+        "message": "Cannot create Changeset Extended Data.",
+        "details": [
+            {
+                "code": "InvalidValue",
+                "message": "Provided 'data' value is not valid. 'data' must be a valid base64 encoded json.",
+                "target": "data"
+            },
+            {
+                "code": "MissingRequiredProperty",
+                "message": "Required property is missing.",
+                "target": "data"
+            }
+        ]
+    }
+}

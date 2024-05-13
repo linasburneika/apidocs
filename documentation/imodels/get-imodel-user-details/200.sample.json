@@ -1,0 +1,20 @@
+{
+    "user": {
+        "id": "ea4dfb9f-7f66-4c6f-82c5-0efad1636a1f",
+        "displayName": "hanson.deck@cohesivecompanies.com",
+        "givenName": "Hanson",
+        "surname": "Deck",
+        "email": "hanson.deck@cohesivecompanies.com",
+        "statistics": {
+            "pushedChangesetsCount": 16,
+            "lastChangesetPushDate": "2023-03-01T09:21:38.7900000Z",
+            "createdVersionsCount": 1,
+            "lastAccessTime": "2023-03-01T15:01:30.0000000Z"
+        },
+        "_links": {
+            "self": {
+                "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/users/ea4dfb9f-7f66-4c6f-82c5-0efad1636a1f"
+            }
+        }
+    }
+}

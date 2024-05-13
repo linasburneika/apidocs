@@ -61,6 +61,7 @@ paths:
       tags:
         - UserSearch
       operationId: GetMe
+      description: "fsgfdsgf"
       parameters:
         - $ref: 'https://raw.githubusercontent.com/linasburneika/apidocs/main/lib/shared.json#/components/parameters/AuthParameter'
         - $ref: 'https://raw.githubusercontent.com/linasburneika/apidocs/main/lib/shared.json#/components/parameters/AcceptParameter'

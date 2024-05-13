@@ -1,0 +1,35 @@
+{
+    "changesetGroups": [
+        {
+            "id": "018b77a5-ed0f-4a74-a88d-13bc221d1a9a",
+            "state": "inProgress",
+            "description": "Connector run 2024-02-01",
+            "creatorId": "42101fba-847a-4f4e-85a8-a4bed89065e4",
+            "createdDateTime": "2024-02-01T11:10:12.6230000Z",
+            "_links": {
+                "creator": {
+                    "href": "https://api.bentley.com/imodels/1b68e726-57e0-49b9-8080-7da530c443ce/users/42101fba-847a-4f4e-85a8-a4bed89065e4"
+                }
+            }
+        },
+        {
+            "id": "1c6f461d-3457-467d-95fe-16d700dabb99",
+            "state": "completed",
+            "description": "Connector run 2023-11-27",
+            "creatorId": "42101fba-847a-4f4e-85a8-a4bed89065e4",
+            "createdDateTime": "2023-11-27T09:45:57.6630000Z",
+            "_links": {
+                "creator": {
+                    "href": "https://api.bentley.com/imodels/1b68e726-57e0-49b9-8080-7da530c443ce/users/42101fba-847a-4f4e-85a8-a4bed89065e4"
+                }
+            }
+        }
+    ],
+    "_links": {
+        "self": {
+            "href": "https://api.bentley.com/imodels/1b68e726-57e0-49b9-8080-7da530c443ce/changesetgroups?$skip=0&$top=100"
+        },
+        "prev": null,
+        "next": null
+    }
+}

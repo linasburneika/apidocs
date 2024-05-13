@@ -1,0 +1,63 @@
+{
+  "error": {
+    "code": "InvalidiTwinsRequest",
+    "message": "Cannot create iTwin.",
+    "details": [
+      {
+        "code": "MissingRequiredProperty",
+        "message": "A required property is missing or empty.",
+        "target": "displayName"
+      },
+      {
+        "code": "MissingRequiredProperty",
+        "message": "A required property is missing or empty.",
+        "target": "class"
+      },
+      {
+        "code": "MissingRequiredProperty",
+        "message": "A required property is missing or empty.",
+        "target": "subClass"
+      },
+      {
+        "code": "InvalidValue",
+        "message": "Status value is incorrect. Valid values are Active, Inactive and Trial.",
+        "target": "status"
+      },
+      {
+        "code": "InvalidValue",
+        "message": "Class value is incorrect.",
+        "target": "class"
+      },
+      {
+        "code": "InvalidValue",
+        "message": "GeographicLocation cannot be more than 255 characters.",
+        "target": "geographicLocation"
+      },
+      {
+        "code": "InvalidValue",
+        "message": "DataCenterLocation value is incorrect.",
+        "target": "dataCenterLocation"
+      },
+      {
+        "code": "InvalidValue",
+        "message": "SubClass value is incorrect.",
+        "target": "subClass"
+      },
+      {
+        "code": "InvalidValue",
+        "message": "DisplayName cannot be more than 255 characters.",
+        "target": "displayName"
+      },
+      {
+        "code": "InvalidValue",
+        "message": "Number cannot be more than 255 characters.",
+        "target": "number"
+      },
+      {
+        "code": "InvalidValue",
+        "message": "Type cannot be more than 100 characters.",
+        "target": "type"
+      }
+    ]
+  }
+}

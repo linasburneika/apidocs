@@ -1,0 +1,19 @@
+{
+  "statusCode": 422,
+  "description": "Invalid request to create reality data. Please ensure that the request is valid.",
+  "headers": [],
+  "representations": [
+    {
+      "contentType": "application/json;InvalidRealityDataRequest",
+      "sample": "InvalidRealityDataRequest",
+      "schemaId": "schema",
+      "typeName": "error-response"
+    },
+    {
+      "contentType": "application/json;MissingRequestBody",
+      "sample": "MissingRequestBody",
+      "schemaId": "schema",
+      "typeName": "error-response"
+    }
+  ]
+}

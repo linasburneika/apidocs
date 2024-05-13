@@ -1,0 +1,6 @@
+{
+  "error": {
+    "code": "InvalidDissociateRealityDataRequest",
+    "message": "Unknown error. Please ensure that the request is valid."
+  }
+}

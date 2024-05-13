@@ -1,0 +1,19 @@
+{
+  "statusCode": 409,
+  "description": "iModel with the same name already exists in the iTwin or the source iModel is not initialized.",
+  "headers": [],
+  "representations": [
+    {
+      "contentType": "application/json;iModelExists",
+      "sample": "iModelExists",
+      "schemaId": "common-errors",
+      "typeName": "ErrorResponse"
+    },
+    {
+      "contentType": "application/json;iModelNotInitialized",
+      "sample": "iModelNotInitialized",
+      "schemaId": "common-errors",
+      "typeName": "ErrorResponse"
+    }
+  ]
+}

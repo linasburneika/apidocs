@@ -1,0 +1,13 @@
+{
+    "statusCode": 413,
+    "description": "Indicates that the file the user attempted to upload is above the maximum size.",
+    "headers": [],
+    "representations": [
+      {
+        "contentType": "application/json",
+        "sample": "",
+        "schemaId": "common-errors",
+        "typeName": "ErrorResponse"
+      }
+    ]
+  }

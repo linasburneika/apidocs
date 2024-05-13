@@ -1,0 +1,6 @@
+{
+  "error": {
+    "code": "ImageNotFound",
+    "message": "Requested image is not available."
+  }
+}

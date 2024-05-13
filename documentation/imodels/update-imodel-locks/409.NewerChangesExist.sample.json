@@ -1,0 +1,7 @@
+{
+    "error": {
+        "code": "NewerChangesExist",
+        "message": "One or more objects have been locked in a newer Changeset.",
+        "objectIds": ["0x1", "0x2", "0x3"]
+    }
+}

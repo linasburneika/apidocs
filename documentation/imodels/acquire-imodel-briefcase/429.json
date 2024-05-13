@@ -1,0 +1,27 @@
+{
+    "statusCode": 429,
+    "description": "This response indicates that the user has sent too many requests in a given amount of time.",
+    "headers": [
+        {
+            "name": "retry-after",
+            "description": "Indicates how long the user agent should wait before making a follow-up request.",
+            "type": "string",
+            "required": true,
+            "values": []
+        }
+    ],
+    "representations": [
+        {
+            "contentType": "application/json;TooManyRequests",
+            "sample": "TooManyRequests",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        },
+        {
+            "contentType": "application/json;RateLimitExceeded",
+            "sample": "RateLimitExceeded",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "statusCode": 409,
+    "description": "Changeset Group is already closed or the iModel is not initialized.",
+    "headers": [],
+    "representations": [
+        {
+            "contentType": "application/json;ChangesetGroupIsClosed",
+            "sample": "ChangesetGroupIsClosed",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        },
+        {
+            "contentType": "application/json;iModelNotInitialized",
+            "sample": "iModelNotInitialized",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        }
+    ]
+}

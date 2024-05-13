@@ -1,0 +1,17 @@
+{
+    "briefcase": {
+        "id": "2",
+        "briefcaseId": 2,
+        "displayName": "#2 Device Name",
+        "ownerId": "42101fba-847a-4f4e-85a8-a4bed89065e4",
+        "acquiredDateTime": "2020-10-20T10:51:33.1700000Z",
+        "fileSize": 2048,
+        "deviceName": "Device Name",
+        "application": null,
+        "_links": {
+            "owner": {
+                "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/users/42101fba-847a-4f4e-85a8-a4bed89065e4"
+            }
+        }
+    }
+}

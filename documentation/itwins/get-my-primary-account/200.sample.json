@@ -1,0 +1,10 @@
+{
+  "iTwin": {
+    "id": "76c1102e-4f33-4dfa-ad93-bcd9ab717977",
+    "class": "Account",
+    "subClass": "Account",
+    "type": null,
+    "number": "Acme Corp.",
+    "displayName": "Acme Corp."    
+  }
+}

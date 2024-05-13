@@ -1,0 +1,6 @@
+{
+  "error": {
+    "code": "AssociationNotFound",
+    "message": "Requested association between reality data and project is not available."
+  }
+}

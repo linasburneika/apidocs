@@ -1,0 +1,58 @@
+{
+  "error": {
+    "code": "InvalidiTwinsRequest",
+    "message": "Cannot update iTwin.",
+    "details": [
+      {
+        "code": "ReadOnlyProperty",
+        "message": "Id is read only and cannot be modified.",
+        "target": "id"
+      },
+      {
+        "code": "ReadOnlyProperty",
+        "message": "Class is read only and cannot be modified.",
+        "target": "class"
+      },
+      {
+        "code": "ReadOnlyProperty",
+        "message": "SubClass is read only and cannot be modified.",
+        "target": "subClass"
+      },
+      {
+        "code": "ReadOnlyProperty",
+        "message": "CreatedDateTime is read only and should not be set.",
+        "target": "createdDateTime"
+      },
+      {
+        "code": "InvalidValue",
+        "message": "GeographicLocation cannot be more than 255 characters.",
+        "target": "geographicLocation"
+      },
+      {
+        "code": "ReadOnlyProperty",
+        "message": "DataCenterLocation is read only and should not be set.",
+        "target": "dataCenterLocation"
+      },
+      {
+        "code": "InvalidValue",
+        "message": "Status value is incorrect. Valid values are Active, Inactive and Trial.",
+        "target": "status"
+      },
+      {
+        "code": "InvalidValue",
+        "message": "DisplayName cannot be more than 255 characters.",
+        "target": "displayName"
+      },
+      {
+        "code": "InvalidValue",
+        "message": "Number cannot be more than 255 characters.",
+        "target": "number"
+      },
+      {
+        "code": "InvalidValue",
+        "message": "Type cannot be more than 100 characters.",
+        "target": "type"
+      }
+    ]
+  }
+}

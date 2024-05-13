@@ -1,0 +1,5 @@
+Organization Administrators are power users for all iTwins owned by their organization. They will be able to create, modify or delete any iTwin.
+Example: john.doe@example.com is an Organization Administrator that works for Example Industries. John will be able to create iTwins and those iTwins will belong to Example Industries. John and any other Organization Administrator for Example Industries will be able to update or delete the iTwin. Any user (an employee of Example Industries, or an external participant) can be [invited] (https://developer.bentley.com/apis/access-control/operations/add-iTwin-members/) to collaborate on the iTwin.
+
+
+An Organization Administrator must have at least one of the following roles assigned in User Management: Account Administrator, Co-Administrator, or CONNECT Services Administrator. For more information about User Management please visit our Bentley Communities [Licensing, Cloud, and Web Services](https://communities.bentley.com/communities/other_communities/licensing_cloud_and_web_services/w/wiki/50711/user-management-2-0) wiki page.

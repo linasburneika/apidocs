@@ -1,0 +1,25 @@
+{
+    "statusCode": 404,
+    "description": "Specified iModel, Changeset or Checkpoint was not found.",
+    "headers": [],
+    "representations": [
+        {
+            "contentType": "application/json;iModelNotFound",
+            "sample": "iModelNotFound",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        },
+        {
+            "contentType": "application/json;ChangesetNotFound",
+            "sample": "ChangesetNotFound",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        },
+        {
+            "contentType": "application/json;CheckpointNotFound",
+            "sample": "CheckpointNotFound",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        }
+    ]
+}

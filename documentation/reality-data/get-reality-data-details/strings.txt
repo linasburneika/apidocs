@@ -1,0 +1,2 @@
+scope=realitydata:read
+permission=RDS_USE

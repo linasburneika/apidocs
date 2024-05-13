@@ -1,0 +1,27 @@
+{
+    "error": {
+        "code": "InvalidiModelsRequest",
+        "message": "Cannot create Share.",
+        "details": [
+            {
+                "code": "InvalidValue",
+                "message": "Provided 'name' value is not valid. Expected a value of type 'string'.",
+                "target": "name"
+            },
+            {
+                "code": "InvalidHeaderValue",
+                "message": "'application/xml' is not supported 'content-type'. Supported media type is 'application/json'.",
+                "target": "content-type"
+            },
+            {
+                "code": "MissingRequiredProperty",
+                "message": "Required property is missing.",
+                "target": "name"
+            },
+            {
+                "code": "InvalidRequestBody",
+                "message": "Failed to parse request body. Make sure it is a valid JSON."
+            }
+        ]
+    }
+}

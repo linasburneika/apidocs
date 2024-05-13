@@ -1,0 +1,22 @@
+{
+    "error": {
+        "code": "InvalidiModelsRequest",
+        "message": "Cannot update Changeset.",
+        "details": [
+            {
+                "code": "InvalidValue",
+                "message": "Provided 'state' value is not valid. Should be set to 'fileUploaded'.",
+                "target": "state"
+            },
+            {
+                "code": "MissingRequiredProperty",
+                "message": "Required property is missing.",
+                "target": "state"
+            },
+            {
+                "code": "InvalidRequestBody",
+                "message": "Failed to parse request body. Make sure it is a valid JSON."
+            }
+        ]
+    }
+}

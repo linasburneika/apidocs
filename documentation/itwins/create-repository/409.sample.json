@@ -1,0 +1,6 @@
+{
+  "error": {
+    "code": "iTwinRepositoryExists",
+    "message": "The specified iTwin Repository already exists."
+  }
+}

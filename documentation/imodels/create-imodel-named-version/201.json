@@ -1,0 +1,13 @@
+{
+    "statusCode": 201,
+    "description": "Created",
+    "headers": [],
+    "representations": [
+      {
+        "contentType": "application/json",
+        "sample": "",
+        "schemaId": "v1-schema",
+        "typeName": "NamedVersionResponse"
+      }
+    ]
+  }

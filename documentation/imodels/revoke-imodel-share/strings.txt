@@ -1,0 +1,2 @@
+scope=imodels:modify
+permission=imodels_webview

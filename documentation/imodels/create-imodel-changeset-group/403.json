@@ -1,0 +1,13 @@
+{
+    "statusCode": 403,
+    "description": "User is not authorized to create a Changeset Group.",
+    "headers": [],
+    "representations": [
+        {
+            "contentType": "application/json",
+            "sample": "",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        }
+    ]
+  }

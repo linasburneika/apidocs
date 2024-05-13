@@ -1,0 +1,25 @@
+{
+    "statusCode": 409,
+    "description": "Changeset already exists, another user is currently pushing a Changeset or the iModel is not initialized.",
+    "headers": [],
+    "representations": [
+        {
+            "contentType": "application/json;ConflictWithAnotherUser",
+            "sample": "ConflictWithAnotherUser",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        },
+        {
+            "contentType": "application/json;ChangesetExists",
+            "sample": "ChangesetExists",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        },
+        {
+            "contentType": "application/json;iModelNotInitialized",
+            "sample": "iModelNotInitialized",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        }
+    ]
+}

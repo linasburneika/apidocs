@@ -1,0 +1,18 @@
+{
+  "error": {
+    "code": "iTwinExists",
+    "message": "An iTwin with the specified number or displayName already exists.",
+    "details": [
+      {
+        "code": "InvalidValue",
+        "target": "displayName",
+        "message": "An iTwin with the specified displayName already exists."
+      },
+      {
+        "code": "InvalidValue",
+        "target": "number",
+        "message": "An iTwin with the specified number already exists."
+      }
+    ]
+  }
+}

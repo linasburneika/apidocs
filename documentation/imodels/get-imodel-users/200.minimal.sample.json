@@ -1,0 +1,33 @@
+{
+    "users": [
+        {
+            "id": "ea4dfb9f-7f66-4c6f-82c5-0efad1636a1f",
+            "displayName": "hanson.deck@cohesivecompanies.com",
+            "_links": {
+                "self": {
+                    "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/users/ea4dfb9f-7f66-4c6f-82c5-0efad1636a1f"
+                }
+            }
+        },
+        {
+            "id": "cdde5818-21ff-4e54-a014-cf1d85205896",
+            "displayName": "hans.down@cohesivecompanies.com",
+            "_links": {
+                "self": {
+                    "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/users/cdde5818-21ff-4e54-a014-cf1d85205896"
+                }
+            }
+        }
+    ],
+    "_links": {
+        "self": {
+            "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/users?$skip=0&$top=100"
+        },
+        "prev": {
+            "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/users?$skip=0&$top=100"
+        },
+        "next": {
+            "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/users?$skip=100&$top=100"
+        }
+    }
+}

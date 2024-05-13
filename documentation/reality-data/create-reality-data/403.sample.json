@@ -1,0 +1,6 @@
+{
+  "error": {
+      "code": "InsufficientPermissions",
+      "message": "The user has insufficient permissions for the requested operation."
+  }
+}

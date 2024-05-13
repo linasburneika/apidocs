@@ -1,0 +1,6 @@
+{
+    "error": {
+        "code": "ShareNotFound",
+        "message": "Requested Share is not available."
+    }
+}

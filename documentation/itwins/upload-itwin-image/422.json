@@ -1,0 +1,13 @@
+{
+    "statusCode": 422,
+    "description": "Invalid request to add iTwin image.  Review the 'Field Values' section near the top of this page.",
+    "headers": [],
+    "representations": [
+      {
+        "contentType": "application/json",
+        "sample": "",
+        "schemaId": "common-errors",
+        "typeName": "ErrorResponse"
+      }
+    ]
+  }

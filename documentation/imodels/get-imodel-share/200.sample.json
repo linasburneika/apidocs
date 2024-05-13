@@ -1,0 +1,9 @@
+{
+    "share": {
+        "id": "846e5f15-ac4a-4971-8160-580d95624f81",
+        "displayName": "iModel Share name",
+        "name": "iModel Share name",
+        "expiresAt": "2020-10-20T10:51:33.1700000Z",
+        "permission": "imodels_webview"
+        }
+}

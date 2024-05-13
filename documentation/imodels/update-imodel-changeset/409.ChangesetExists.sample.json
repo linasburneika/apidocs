@@ -1,0 +1,6 @@
+{
+    "error": {
+        "code": "ChangesetExists",
+        "message": "Changeset with the same id already exists within the iModel."
+    }
+}

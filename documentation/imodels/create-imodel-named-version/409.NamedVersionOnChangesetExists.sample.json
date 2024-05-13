@@ -1,0 +1,6 @@
+{
+    "error": {
+        "code": "NamedVersionOnChangesetExists",
+        "message": "Named Version for specified Changeset already exists."
+    }
+}

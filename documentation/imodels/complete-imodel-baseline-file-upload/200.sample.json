@@ -1,0 +1,14 @@
+{
+    "baselineFile": {
+        "id": "5e19bee0-3aea-4355-a9f0-c6df9989ee7d",
+        "displayName": "5e19bee0-3aea-4355-a9f0-c6df9989ee7d.bim",
+        "fileSize": 12563,
+        "state": "initializationScheduled",
+        "_links": {
+            "creator": {
+                "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/users/42101fba-847a-4f4e-85a8-a4bed89065e4"
+            },
+            "download": null
+        }
+    }
+}

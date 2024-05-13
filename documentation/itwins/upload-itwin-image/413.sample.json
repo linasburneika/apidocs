@@ -1,0 +1,6 @@
+{
+    "error": {
+        "code": "RequestTooLarge",
+        "message": "Provided file is greater than the maximum allowed file size of 5MB."
+    }
+}

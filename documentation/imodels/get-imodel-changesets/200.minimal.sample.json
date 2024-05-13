@@ -1,0 +1,103 @@
+{
+    "changesets": [
+        {
+            "id": "a1ecbdc8c4f6173004f9f881914a57c5511a362b",
+            "displayName": "1",
+            "description": "Changeset 0",
+            "index": 1,
+            "parentId": "",
+            "creatorId": "ea4dfb9f-7f66-4c6f-82c5-0efad1636a1f",
+            "pushDateTime": "2020-10-21T06:34:45.007Z",
+            "state": "fileUploaded",
+            "containingChanges": 0,
+            "fileSize": 109,
+            "briefcaseId": 2,
+            "groupId": "1a038d01-5b2d-44d9-b4ca-e8d21805983c",
+            "_links": {
+                "creator": {
+                    "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/users/ea4dfb9f-7f66-4c6f-82c5-0efad1636a1f"
+                },
+                "self": {
+                    "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/changesets/a1ecbdc8c4f6173004f9f881914a57c5511a362b"
+                }
+            }
+        },
+        {
+            "id": "7caef8ab5afcd99c9e618fb37978c3a03d0409c7",
+            "displayName": "2",
+            "description": "Changeset 1",
+            "index": 2,
+            "parentId": "a1ecbdc8c4f6173004f9f881914a57c5511a362b",
+            "creatorId": "ea4dfb9f-7f66-4c6f-82c5-0efad1636a1f",
+            "pushDateTime": "2020-10-21T06:34:48.123Z",
+            "state": "fileUploaded",
+            "containingChanges": 0,
+            "fileSize": 139,
+            "briefcaseId": 2,
+            "groupId": "1a038d01-5b2d-44d9-b4ca-e8d21805983c",
+            "_links": {
+                "creator": {
+                    "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/users/ea4dfb9f-7f66-4c6f-82c5-0efad1636a1f"
+                },
+                "self": {
+                    "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/changesets/7caef8ab5afcd99c9e618fb37978c3a03d0409c7"
+                }
+            }
+        },
+        {
+            "id": "a587345859410ce5c2811c7c558d4578938efa00",
+            "displayName": "3",
+            "description": "Changeset 2",
+            "index": 3,
+            "parentId": "7caef8ab5afcd99c9e618fb37978c3a03d0409c7",
+            "creatorId": "27e3ecc7-ae44-4c9d-b0b5-2f65ec146f1d",
+            "pushDateTime": "2020-10-21T06:34:51.13Z",
+            "state": "fileUploaded",
+            "containingChanges": 2,
+            "fileSize": 109,
+            "briefcaseId": 2,
+            "groupId": null,
+            "_links": {
+                "creator": {
+                    "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/users/27e3ecc7-ae44-4c9d-b0b5-2f65ec146f1d"
+                },
+                "self": {
+                    "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/changesets/a587345859410ce5c2811c7c558d4578938efa00"
+                }
+            }
+        },
+        {
+            "id": "13a61888798b687d41f7c748d7414b428766281f",
+            "displayName": "4",
+            "description": "Changeset 3",
+            "index": 4,
+            "parentId": "a587345859410ce5c2811c7c558d4578938efa00",
+            "creatorId": "27e3ecc7-ae44-4c9d-b0b5-2f65ec146f1d",
+            "pushDateTime": "2020-10-21T06:34:54.13Z",
+            "state": "fileUploaded",
+            "containingChanges": 18,
+            "fileSize": 109,
+            "briefcaseId": 2,
+            "groupId": null,
+            "_links": {
+                "creator": {
+                    "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/users/27e3ecc7-ae44-4c9d-b0b5-2f65ec146f1d"
+                },
+                "self": {
+                    "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/changesets/13a61888798b687d41f7c748d7414b428766281f"
+                }
+            }
+        }
+    ],
+    "_links": {
+        "self": {
+            "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/changesets?$skip=100&$top=100"
+        },
+        "prev": {
+            "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/changesets?$skip=0&$top=100"
+        },
+        "next": {
+            "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/changesets?$skip=200&$top=100"
+        }
+    }
+}

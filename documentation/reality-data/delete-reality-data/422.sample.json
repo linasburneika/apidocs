@@ -1,0 +1,6 @@
+{
+  "error": {
+    "code": "InvalidDeleteRealityDataRequest",
+    "message": "Unknown error. Please ensure that the request is valid."
+  }
+}

@@ -1,0 +1,18 @@
+{
+    "briefcaseId": 2,
+    "changesetId": "1f2e04b666edce395e37a795e2231e995cbf8349",
+    "lockedObjects": [
+        {
+            "lockLevel": "shared",
+            "objectIds": ["0x1", "0x2", "0xab"]
+        },
+        {
+            "lockLevel": "exclusive",
+            "objectIds": ["0x3", "0x4", "0xac"]
+        },
+        {
+            "lockLevel": "none",
+            "objectIds": ["0x5", "0x6", "0xad"]
+        }
+    ]
+}

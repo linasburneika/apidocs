@@ -1,0 +1,26 @@
+{
+    "error": {
+        "code": "InvalidiModelsRequest",
+        "message": "Cannot acquire Briefcase.",
+        "details": [
+            {
+                "code": "InvalidValue",
+                "message": "Provided 'deviceName' is not valid. The value exceeds allowed 255 characters.",
+                "target": "deviceName"
+            },
+            {
+                "code": "InvalidHeaderValue",
+                "message": "'application/xml' is not supported 'content-type'. Supported media type is 'application/json'.",
+                "target": "content-type"
+            },
+            {
+                "code": "ResourceQuotaExceeded",
+                "message": "Maximum number of Briefcases per user limit reached.",
+                "innerError":
+                    {
+                    "code": "MaximumNumberOfBriefcasesPerUser"
+                    }
+            }
+        ]
+    }
+}

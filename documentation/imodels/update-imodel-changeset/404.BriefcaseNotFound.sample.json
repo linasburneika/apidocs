@@ -1,0 +1,6 @@
+{
+    "error": {
+        "code": "BriefcaseNotFound",
+        "message": "Requested Briefcase is not available."
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "error": {
+        "code": "CheckpointNotFound",
+        "message": "Requested Checkpoint is not available."
+    }
+}

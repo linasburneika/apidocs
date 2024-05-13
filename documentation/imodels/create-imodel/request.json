@@ -1,0 +1,22 @@
+{
+    "representations": [
+        {
+              "contentType": "application/json",
+              "sample": "EmptyiModel",
+              "schemaId": "v1-schema",
+              "typeName": "iModelCreate"
+        },
+        {
+              "contentType": "application/json",
+              "sample": "FromTemplate",
+              "schemaId": "v1-schema",
+              "typeName": "iModelCreate"
+        },
+        {
+            "contentType": "application/json",
+            "sample": "FromBaselineFile",
+            "schemaId": "v1-schema",
+            "typeName": "iModelCreate"
+        }
+    ]
+}

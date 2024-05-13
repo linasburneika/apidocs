@@ -1,0 +1,12 @@
+{
+    "statusCode": 403,
+    "headers": [],
+    "representations": [
+      {
+        "contentType": "application/json",
+        "sample": "",
+        "schemaId": "common-errors",
+        "typeName": "ErrorResponse"
+      }
+    ]
+}

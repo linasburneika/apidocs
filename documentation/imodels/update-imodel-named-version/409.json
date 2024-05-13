@@ -1,0 +1,19 @@
+{
+    "statusCode": 409,
+    "description": "Named Version with the same name already exists within the iModel or the iModel is not initialized.",
+    "headers": [],
+    "representations": [
+        {
+            "contentType": "application/json;NamedVersionExists",
+            "sample": "NamedVersionExists",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        },
+        {
+            "contentType": "application/json;iModelNotInitialized",
+            "sample": "iModelNotInitialized",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        }
+    ]
+}

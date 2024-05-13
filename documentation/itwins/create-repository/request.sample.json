@@ -1,0 +1,5 @@
+{
+    "class": "GeographicInformationSystem",
+    "subClass": "WebMapTileService",
+    "uri": "https://developer.bentley.com"
+}

@@ -1,0 +1,19 @@
+{
+    "statusCode": 200,
+    "description": "OK",
+    "headers": [],
+    "representations": [
+      {
+        "contentType": "application/json;minimal",
+        "sample": "minimal",
+        "schemaId": "v1-schema",
+        "typeName": "ChangesetsMinimal"
+      },
+      {
+        "contentType": "application/json;representation",
+        "sample": "representation",
+        "schemaId": "v1-schema",
+        "typeName": "ChangesetsRepresentation"
+      }
+    ]
+  }

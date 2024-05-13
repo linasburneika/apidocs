@@ -1,0 +1,19 @@
+{
+    "statusCode": 422,
+    "description": "The 422 (Unprocessable Entity) status code indicates that the request cannot be processed by the server due to a client error (e.g. malformed request syntax)",
+    "headers": [],
+    "representations": [
+      {
+        "contentType": "application/json;InvalidiModelsRequest",
+        "sample": "InvalidiModelsRequest",
+        "schemaId": "common-errors",
+        "typeName": "ErrorResponse"
+      },
+      {
+        "contentType": "application/json;MissingRequestBody",
+        "sample": "MissingRequestBody",
+        "schemaId": "common-errors",
+        "typeName": "ErrorResponse"
+      }
+    ]
+}

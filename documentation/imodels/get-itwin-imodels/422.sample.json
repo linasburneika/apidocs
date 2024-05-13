@@ -1,0 +1,13 @@
+{
+    "error": {
+        "code": "InvalidiModelsRequest",
+        "message": "Cannot get iModels.",
+        "details": [
+            {
+                "code": "InvalidValue",
+                "message": "'abc' is not a valid 'iTwinId' value.",
+                "target": "iTwinId"
+            }
+        ]
+    }
+}

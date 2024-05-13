@@ -1,0 +1,6 @@
+{
+    "error": {
+        "code": "NamedVersionExists",
+        "message": "Named Version with the same name already exists within the iModel."
+    }
+}

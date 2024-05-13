@@ -1,0 +1,574 @@
+{
+  "components": {
+    "schemas": {
+      "iTwin-summary": {
+        "type": "object",
+        "title": "iTwin (summary)",
+        "description": "Minimal representation of a iTwin that contains only id, class, subClass, type, number and displayName.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The iTwin Id."
+          },
+          "class": {
+            "type": "string",
+            "description": "The [Class](https://developer.bentley.com/apis/itwins/overview/#itwinclassesandsubclasses) of your iTwin.",
+            "enum": [
+              "Account",
+              "Thing",
+              "Endeavor"
+            ]
+          },
+          "subClass": {
+            "type": "string",
+            "description": "The [subClass](https://developer.bentley.com/apis/itwins/overview/#itwinclassesandsubclasses) your iTwin.",
+            "enum": [
+              "Account",
+              "Portfolio",
+              "Asset",
+              "Program",
+              "Project",
+              "WorkPackage"
+            ]
+          },
+          "type": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "An open ended property to better define your iTwin's Type.",
+            "maxLength": 100
+          },
+          "number": {
+            "type": "string",
+            "description": "A unique number or code for the iTwin. This is the value that uniquely identifies the iTwin within your organization.",
+            "maxLength": 255
+          },
+          "displayName": {
+            "type": "string",
+            "description": "A display name for the iTwin.",
+            "maxLength": 255
+          }
+        }
+      },
+      "iTwin": {
+        "type": "object",
+        "description": "Full representation of a iTwin.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The iTwin Id."
+          },
+          "class": {
+            "type": "string",
+            "description": "The [Class](https://developer.bentley.com/apis/itwins/overview/#itwinclassesandsubclasses) of your iTwin.",
+            "enum": [
+              "Account",
+              "Thing",
+              "Endeavor"
+            ]
+          },
+          "subClass": {
+            "type": "string",
+            "description": "The [subClass](https://developer.bentley.com/apis/itwins/overview/#itwinclassesandsubclasses) your iTwin.",
+            "enum": [
+              "Account",
+              "Portfolio",
+              "Asset",
+              "Program",
+              "Project",
+              "WorkPackage"
+            ]
+          },
+          "type": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "An open ended property to better define your iTwin's Type.",
+            "maxLength": 100
+          },
+          "number": {
+            "type": "string",
+            "description": "A unique number or code for the iTwin. This is the value that uniquely identifies the iTwin within your organization.",
+            "maxLength": 255
+          },
+          "displayName": {
+            "type": "string",
+            "description": "A display name for the iTwin.",
+            "maxLength": 255
+          },
+          "geographicLocation": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "An optional field specifying the location of the iTwin. This is typically an address or city."
+          },
+          "dataCenterLocation": {
+            "type": "string",
+            "description": "The data center where the data for this iTwin will be persisted. Default is East US. Valid Values: East US, North Europe, West Europe, Southeast Asia, Australia East, UK South, Canada Central, Central India, Japan East."
+          },
+          "status": {
+            "$ref": "#/components/schemas/iTwinStatus",
+            "description": "Must be one of Active, Inactive or Trial. The default value is Active. By default, Inactive iTwins are not returned from the [Get my iTwins API](https://developer.bentley.com/apis/itwins/operations/get-my-itwins/) unless requested using the includeInactive parameter."
+          },
+          "parentId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "The Id of the parent of this iTwin. For example, a Project iTwin could be a child of an Asset iTwin."
+          },
+          "iTwinAccountId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "The Id of the Account that owns this iTwin. The Account is also the root of any iTwin hierarchy."
+          },
+          "imageName": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "The name of the image. The name is unique and will only change if the image changes."
+          },
+          "image": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "The URL of the image. This is a small, thumbnail image that was created using the [Upload iTwin Image API](https://developer.bentley.com/apis/operations/upload-itwin-image/). The URL will be valid for a minimum of 1 hour."
+          },
+          "createdDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date that the iTwin was created."
+          },
+          "createdBy": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "The Id of the user that created the iTwin."
+          }
+        }
+      },
+      "iTwins-prefer-return-minimal": {
+        "type": "object",
+        "title": "iTwins (prefer return=minimal)",
+        "description": "A list of iTwins in the minimal representation format.",
+        "properties": {
+          "iTwins": {
+            "type": "array",
+            "description": "A list of iTwins in the minimal representation format.",
+            "items": {
+              "$ref": "#/components/schemas/iTwin-summary"
+            }
+          },
+          "_links": {
+            "description": "Contains the hyperlinks to the previous and next pages of results.",
+            "$ref": "#/components/schemas/links-paging"
+          }
+        }
+      },
+      "iTwins-prefer-return-representation": {
+        "type": "object",
+        "title": "iTwins (prefer return=representation)",
+        "description": "A list of iTwins in the full representation format.",
+        "properties": {
+          "iTwins": {
+            "type": "array",
+            "description": "A list of iTwins in the full representation format.",
+            "items": {
+              "$ref": "#/components/schemas/iTwin"
+            }
+          },
+          "_links": {
+            "description": "Contains the hyperlinks to the previous and next pages of results.",
+            "$ref": "#/components/schemas/links-paging"
+          }
+        }
+      },
+      "Errors": {
+        "type": "object",
+        "properties": {
+          "errors": {
+            "type": "array",
+            "items": {
+              "errorArea": {
+                "type": "string"
+              },
+              "errorMessage": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "links-paging": {
+        "title": "links (paging)",
+        "description": "URLs for redoing the current request, getting to the previous or next page of results, if applicable containg.",
+        "type": "object",
+        "properties": {
+          "self": {
+            "description": "URL for redoing the current request.",
+            "$ref": "#/components/schemas/link"
+          },
+          "next": {
+            "description": "URL for getting the next page of results.",
+            "$ref": "#/components/schemas/link"
+          },
+          "prev": {
+            "description": "URL for getting the previous page of results.",
+            "$ref": "#/components/schemas/link"
+          }
+        }
+      },
+      "link": {
+        "type": "object",
+        "description": "Hyperlink container.",
+        "properties": {
+          "href": {
+            "type": "string",
+            "description": "Hyperlink container."
+          }
+        }
+      },
+      "iTwinStatus": {
+        "type": "string",
+        "title": "iTwin Status",
+        "description": "One of 'Active', 'Inactive', 'Trial'",
+        "enum": [
+          "Active",
+          "Inactive",
+          "Trial"
+        ]
+      },
+      "iTwin-update": {
+        "type": "object",
+        "title": "iTwin (update)",
+        "description": "Properties of the iTwin to be updated.",
+        "properties": {
+          "class": {
+            "type": "string",
+            "description": "The [Class](https://developer.bentley.com/apis/itwins/overview/#itwinclassesandsubclasses) of your iTwin.",
+            "enum": [
+              "Account",
+              "Thing",
+              "Endeavor"
+            ]
+          },
+          "subClass": {
+            "type": "string",
+            "description": "The [subClass](https://developer.bentley.com/apis/itwins/overview/#itwinclassesandsubclasses) your iTwin.",
+            "enum": [
+              "Account",
+              "Portfolio",
+              "Asset",
+              "Program",
+              "Project",
+              "WorkPackage"
+            ]
+          },
+          "type": {
+            "type": "string",
+            "description": "An open ended property to better define your iTwin's Type.",
+            "maxLength": 100
+          },
+          "displayName": {
+            "type": "string",
+            "description": "A display name for the iTwin.",
+            "maxLength": 255
+          },
+          "number": {
+            "type": "string",
+            "description": "A unique number or code for the iTwin. This is the value that uniquely identifies the iTwin within your organization.",
+            "maxLength": 255
+          },
+          "status": {
+            "$ref": "#/components/schemas/iTwinStatus",
+            "description": "Must be one of Active, Inactive or Trial. The default value is Active. By default, Inactive iTwins are not returned from the [Get my iTwins API](https://developer.bentley.com/apis/itwins/operations/get-my-itwins/) unless requested using the includeInactive parameter."
+          }
+        }
+      },
+      "iTwin-repository": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The iTwin repository id."
+          },
+          "class": {
+            "type": "string",
+            "description": "The class of your iTwin repository.",
+            "enum": [
+              "RealityData",
+              "iModels",
+              "Storage",
+              "Forms",
+              "Issues",
+              "ProjectWise",
+              "GeographicInformationSystem"
+            ]
+          },
+          "subClass": {
+            "type": "string",
+            "description": "The subClass of your iTwin repository.",
+            "enum": [
+              "WebMapService",
+              "WebMapTileService",
+              "MapServer"
+            ]
+          },
+          "uri": {
+            "type": "string",
+            "description": "The uri to the repository."
+          }
+        }
+      },
+      "iTwin-repository-create": {
+        "type": "object",
+        "properties": {
+          "class": {
+            "type": "string",
+            "description": "The class of your iTwin repository.",
+            "enum": [
+              "RealityData",
+              "iModels",
+              "Storage",
+              "Forms",
+              "Issues",
+              "ProjectWise",
+              "GeographicInformationSystem"
+            ]
+          },
+          "subClass": {
+            "type": "string",
+            "description": "The subClass of your iTwin repository.",
+            "enum": [
+              "WebMapService",
+              "WebMapTileService",
+              "MapServer"
+            ]
+          },
+          "uri": {
+            "type": "string",
+            "description": "The uri to the custom repository."
+          }
+        },
+        "example": {
+          "class": "GeographicInformationSystem",
+          "subClass": "WebMapTileService",
+          "url": "https://developer.bentley.com"
+        },
+        "required": [
+          "class",
+          "uri"
+        ]
+      },
+      "Permissions": {
+        "type": "object",
+        "title": "Permissions",
+        "description": "List of permission user has on a given iTwin",
+        "properties": {
+          "permissions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "image": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique id of the image."
+          },
+          "smallImageName": {
+            "type": "string",
+            "description": "The generated name of the small image. It is unique and will only change if the image changes. The small image is an automatically generated thumbnail of the uploaded image."
+          },
+          "smallImageUrl": {
+            "type": "string",
+            "description": "The URL of the small image. This URL is also returned as a property on each iTwin. This makes it easy to use as a thumbnail."
+          },
+          "largeImageName": {
+            "type": "string",
+            "description": "The generated name of the uploaded image. It is unique and will only change if the image changes."
+          },
+          "largeImageUrl": {
+            "type": "string",
+            "description": "The URL of the large image. Usually, only the small image is used but this URL will provide the orginal large image if needed."
+          }
+        },
+        "example": {
+          "image": {
+            "id": "b3bd3a79-c5b4-41f5-ba5f-6d8c338d788a",
+            "smallImageName": "small_b3bd3a79-c5b4-41f5-ba5f-6d8c338d788a.jpeg",
+            "smallImageUrl": "https://crdeveussa01.blob.core.windows.net/context-thumbnails/small_b3bd3a79-c5b4-41f5-ba5f-6d8c338d788a.jpeg?sv=2018-03-28&sr=b&sig=cuvNWKQE7hCsc4R12LPRSi%2BVOw0EhlB3pHxnrwHK4G8%3D&se=2023-06-28T00%3A00%3A00Z&sp=r",
+            "largeImageName": "large_b3bd3a79-c5b4-41f5-ba5f-6d8c338d788a.jpeg",
+            "largeImageUrl": "https://crdeveussa01.blob.core.windows.net/context-images/large_b3bd3a79-c5b4-41f5-ba5f-6d8c338d788a.jpeg?sv=2018-03-28&sr=b&sig=n%2BP%2BdGc1Uum4WHEm8Ji9ipZm6tM9d1r8b2iQS%2FjuOEM%3D&se=2023-06-28T00%3A00%3A00Z&sp=r"
+          }
+        }
+      },
+      "iTwin-create": {
+        "type": "object",
+        "title": "iTwin (create)",
+        "description": "Properties of the iTwin to be created.",
+        "properties": {
+          "class": {
+            "type": "string",
+            "description": "The [Class](https://developer.bentley.com/apis/itwins/overview/#itwinclassesandsubclasses) of your iTwin.",
+            "enum": [
+              "Account",
+              "Thing",
+              "Endeavor"
+            ]
+          },
+          "subClass": {
+            "type": "string",
+            "description": "The [subClass](https://developer.bentley.com/apis/itwins/overview/#itwinclassesandsubclasses) your iTwin.",
+            "enum": [
+              "Account",
+              "Portfolio",
+              "Asset",
+              "Program",
+              "Project",
+              "WorkPackage"
+            ]
+          },
+          "type": {
+            "type": "string",
+            "description": "An open ended property to better define your iTwin's Type.",
+            "maxLength": 100
+          },
+          "displayName": {
+            "type": "string",
+            "description": "A display name for the iTwin.",
+            "maxLength": 255
+          },
+          "number": {
+            "type": "string",
+            "description": "A unique number or code for the iTwin. This is the value that uniquely identifies the iTwin within your organization. If not specified, then it will default to the same value as the auto generated iTwin Id.",
+            "maxLength": 255
+          },
+          "geographicLocation": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "An optional field specifying the location of the iTwin. This is typically an address or city."
+          },
+          "dataCenterLocation": {
+            "type": "string",
+            "description": "The data center where the data for this iTwin will be persisted. Default is East US. Valid Values: East US, North Europe, West Europe, Southeast Asia, Australia East, UK South, Canada Central, Central India, Japan East."
+          },
+          "status": {
+            "$ref": "#/components/schemas/iTwinStatus",
+            "description": "Must be one of Active, Inactive or Trial. The default value is Active. By default, Inactive iTwins are not returned from the [Get my iTwins API](https://developer.bentley.com/apis/itwins/operations/get-my-itwins/) unless requested using the includeInactive parameter."
+          },
+          "parentId": {
+            "type": "string",
+            "description": "An optional field containing the Id of the parent of the new iTwin. For example, if you want to create a Project iTwin as a child of an Asset iTwin, then specify the Asset iTwin Id in this field. If not specified, then the parentId will default to the iTwin that represents the users Account."
+          }
+        },
+        "required": [
+          "displayName",
+          "class",
+          "subClass"
+        ]
+      },
+      "image-binary": {
+        "type": "string",
+        "format": "binary",
+        "description": "The binary image file"
+      },
+      "DetailedError": {
+        "type": "object",
+        "description": "Contains error information and an array of more specific errors.",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "One of a server-defined set of error codes."
+          },
+          "message": {
+            "type": "string",
+            "description": "A human-readable representation of the error."
+          },
+          "target": {
+            "type": "string",
+            "description": "The target of the error.",
+            "nullable": true
+          },
+          "details": {
+            "type": "array",
+            "description": "Optional array of more specific errors.",
+            "items": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "details"
+        ]
+      },
+      "DetailedErrorResponse": {
+        "type": "object",
+        "title": "Detailed Error Response",
+        "description": "Gives details for an error that occurred while handling the request. Note that clients MUST NOT assume that every failed request will produce an object of this schema, or that all of the properties in the response will be non-null, as the error may have prevented this response from being constructed.",
+        "properties": {
+          "error": {
+            "description": "Error Detailed information.",
+            "$ref": "#/components/schemas/DetailedError"
+          }
+        },
+        "required": [
+          "error"
+        ]
+      },
+      "Error": {
+        "type": "object",
+        "description": "Contains error information.",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "One of a server-defined set of error codes."
+          },
+          "message": {
+            "type": "string",
+            "description": "A human-readable representation of the error."
+          },
+          "target": {
+            "type": "string",
+            "description": "The target of the error.",
+            "nullable": true
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ]
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "title": "Error Response",
+        "description": "Gives details for an error that occurred while handling the request. Note that clients MUST NOT assume that every failed request will produce an object of this schema, or that all of the properties in the response will be non-null, as the error may have prevented this response from being constructed.",
+        "properties": {
+          "error": {
+            "description": "Error information.",
+            "$ref": "#/components/schemas/Error"
+          }
+        },
+        "required": [
+          "error"
+        ]
+      }
+    }
+  }
+}

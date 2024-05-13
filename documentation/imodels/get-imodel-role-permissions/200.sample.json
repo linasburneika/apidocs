@@ -1,0 +1,12 @@
+{
+    "rolePermissions": [
+        {
+            "roleId": "119a0b34-d11a-4412-93ff-d991b085d8f0",
+            "permissions": [ "imodels_webview" ]
+        },
+        {
+            "roleId": "e8ad12d7-c475-48ac-a178-d6ee0efe44ba",
+            "permissions": [ "imodels_webview", "imodels_read", "imodels_write", "imodels_manage" ]
+        }
+    ]
+}

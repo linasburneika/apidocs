@@ -1,0 +1,565 @@
+{
+  "components": {
+    "schemas": {
+      "reality-data-metadata": {
+        "title": "Reality Data Details",
+        "type": "object",
+        "description": "Details for a reality data",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Identifier of the reality data. This identifier is assigned by the service at the creation of the reality data. It is also unique."
+          },
+          "displayName": {
+            "type": "string",
+            "description": "The name of the reality data. This property may not contain any control sequence such as a URL or code."
+          },
+          "dataset": {
+            "type": "string",
+            "description": "This field can be used to define a loose grouping of reality data. This property may not contain any control sequence such as a URL or code."
+          },
+          "group": {
+            "type": "string",
+            "description": "The group can be used to define a second level of grouping. This property may not contain any control sequence such as a URL or code."
+          },
+          "description": {
+            "type": "string",
+            "description": "A textual description of the reality data. This property may not contain any control sequence such as a URL or code."
+          },
+          "rootDocument": {
+            "type": "string",
+            "description": "Used to indicate the root document of the reality data. The root document can be in a subfolder and is then specified as “Tile_Root.json” or “Folder1/SubFolder1/File.json” for example."
+          },
+          "size": {
+            "type": "integer",
+            "format": "int64",
+            "description": "The size of the reality data in Kilobytes."
+          },
+          "classification": {
+            "type": "string",
+            "description": "Specific value constrained field that indicates the nature of the reality data. The following values are currently supported: Terrain, Imagery, Pinned, Model, Undefined."
+          },
+          "type": {
+            "type": "string",
+            "description": "A key indicating the format of the data. The type property should be a specific indication of the format of the reality data. Given a type, the consuming software should be able to determine if it has the capacity to open the reality data. Although the type field is a free string some specific values are reserved and other values should be selected judiciously. Look at the documentation for an exhaustive list of reserved types."
+          },
+          "acquisition": {
+            "$ref": "#/components/schemas/acquisition",
+            "description": "Provides information regarding the acquisition, such as dates and acquirer used."
+          },
+          "extent": {
+            "$ref": "#/components/schemas/extent",
+            "description": "Contains the rectangular area on the Earth which encloses the reality data."
+          },
+          "authoring": {
+            "type": "boolean",
+            "description": "A boolean value that is true if the data is being created. It is false if the data has been completely uploaded."
+          },
+          "accessControl": {
+            "type": "string",
+            "description": "A value indicating the access permissions on the reality data. 4 values are possible. `Project`: data can only be used as part of a project; `Organization`: any member of the organization can use the data; `Private`: only the owner can use the data; `Public`: anyone, even users external to an enterprise can use the data. Note that this field is read-only and can't be provided as a request parameter. If a `projectId` is provided on the creation of the reality data, the `accessControl` is set to `Project`; otherwise `accessControl` is set to `Organization`. Other values are there for legacy reasons."
+          },
+          "dataCenterLocation": {
+            "type": "string",
+            "description": "Identifies the data center location used to store the reality data."
+          },
+          "modifiedDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO-8601 compliant time (UTC) of last modification of the reality data. E.g. '2017–05–10T13:43:03Z'"
+          },
+          "lastAccessedDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO-8601 compliant time (UTC) of last access of the reality data. E.g. '2017–05–10T13:43:03Z'"
+          },
+          "createdDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO-8601 compliant time (UTC) of the creation of the reality data. E.g. '2017–05–10T13:43:03Z'"
+          }
+        }
+      },
+      "reality-data-metadata-summary": {
+        "title": "Reality Data Details",
+        "type": "object",
+        "description": "Details for a reality data (summary)",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Identifier of the reality data. This identifier is assigned by the service at the creation of the reality data. It is also unique."
+          },
+          "displayName": {
+            "type": "string",
+            "description": "The name of the reality data. This property may not contain any control sequence such as a URL or code."
+          },
+          "type": {
+            "type": "string",
+            "description": "A key indicating the format of the data. The type property should be a specific indication of the format of the reality data. Given a type, the consuming software should be able to determine if it has the capacity to open the reality data. Although the type field is a free string some specific values are reserved and other values should be selected judiciously. Look at the documentation for an exhaustive list of reserved types."
+          },
+          "_links": {
+            "$ref": "#/components/schemas/reality-data-self-link"
+          }
+        }
+      },
+      "reality-data-metadata-response": {
+        "type": "object",
+        "title": "Reality Data Metadata Response",
+        "description": "Reality data metadata response.",
+        "properties": {
+          "realityData": {
+            "$ref": "#/components/schemas/reality-data-metadata",
+            "description": "Reality data metadata."
+          }
+        }
+      },
+      "reality-data-metadata-create-response": {
+        "type": "object",
+        "title": "Reality Data Details Response",
+        "description": "Reality data details response.",
+        "properties": {
+          "realityData": {
+            "$ref": "#/components/schemas/reality-data-metadata",
+            "description": "Reality data details properties."
+          }
+        }
+      },
+      "reality-data-self-link": {
+        "title": "Reality Data Details Link",
+        "type": "object",
+        "properties": {
+          "self": {
+            "$ref": "#/components/schemas/link",
+            "description": "The link to get the reality data details."
+          }
+        }
+      },
+      "reality-data-metadata-return-minimal": {
+        "title": "Reality Data Details",
+        "type": "object",
+        "description": "Array of reality data (summary)",
+        "properties": {
+          "realityData": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/reality-data-metadata-summary"
+            }
+          },
+          "_links": {
+            "$ref": "#/components/schemas/next-page-link"
+          }
+        }
+      },
+      "reality-data-metadata-return-representation": {
+        "title": "Reality Data Details",
+        "type": "object",
+        "description": "Array of reality data",
+        "properties": {
+          "realityData": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/reality-data-metadata"
+            }
+          },
+          "_links": {
+            "$ref": "#/components/schemas/next-page-link"
+          }
+        }
+      },
+      "next-page-link": {
+        "title": "Next Page Link",
+        "type": "object",
+        "description": "URL for getting the next page of data, if applicable.",
+        "properties": {
+          "next": {
+            "$ref": "#/components/schemas/link"
+          }
+        }
+      },
+      "link": {
+        "type": "object",
+        "properties": {
+          "href": {
+            "type": "string"
+          }
+        }
+      },
+      "acquisition": {
+        "title": "Acquisition",
+        "type": "object",
+        "description": "Details about data acquisition.",
+        "properties": {
+          "startDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO-8601 compliant time (UTC) that indicates when the data acquisition started. E.g. '2017–05–10T13:43:03Z'"
+          },
+          "endDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO-8601 compliant time (UTC) that indicates when the data acquisition ended. E.g. '2017–05–10T13:43:03Z'"
+          },
+          "acquirer": {
+            "type": "string",
+            "description": "Description of the acquirer."
+          }
+        }
+      },
+      "extent": {
+        "title": "Extent",
+        "type": "object",
+        "description": "Extent of a reality data, delimited by southwest and northeast coordinates.",
+        "properties": {
+          "southwest": {
+            "$ref": "#/components/schemas/coordinate",
+            "description": "Extent's southwest coordinate."
+          },
+          "northeast": {
+            "$ref": "#/components/schemas/coordinate",
+            "description": "Extent's northeast coordinate."
+          }
+        }
+      },
+      "coordinate": {
+        "title": "Coordinate",
+        "type": "object",
+        "description": "Coordinate used to define an extent.",
+        "properties": {
+          "latitude": {
+            "type": "number",
+            "format": "double",
+            "minimum": -90,
+            "maximum": 90,
+            "description": "Latitude. Latitude ranges between -90 and 90 degrees, inclusive."
+          },
+          "longitude": {
+            "type": "number",
+            "format": "double",
+            "minimum": -180,
+            "maximum": 180,
+            "description": "Longitude. Longitude ranges between -180 and 180 degrees, inclusive."
+          }
+        }
+      },
+      "request-body-create": {
+        "title": "Reality Data (Create)",
+        "type": "object",
+        "description": "Request body for reality data creation.",
+        "properties": {
+          "projectId": {
+            "type": "string",
+            "description": "id of associated project."
+          },
+          "realityData": {
+            "$ref": "#/components/schemas/request-body-reality-data",
+            "description": "Reality data properties."
+          }
+        },
+        "required": [
+          "realityData.displayName",
+          "realityData.classification",
+          "realityData.type"
+        ]
+      },
+      "request-body-update": {
+        "title": "Reality Data (Update)",
+        "type": "object",
+        "description": "Request body for updating a reality data.",
+        "properties": {
+          "projectId": {
+            "type": "string",
+            "description": "id of associated project."
+          },
+          "realityData": {
+            "$ref": "#/components/schemas/request-body-reality-data",
+            "description": "Reality data properties."
+          }
+        },
+        "required": [
+          "projectId"
+        ]
+      },
+      "request-body-reality-data": {
+        "title": "Reality Data",
+        "type": "object",
+        "description": "Reality data details for request body.",
+        "properties": {
+          "displayName": {
+            "type": "string",
+            "description": "Name of the reality data."
+          },
+          "classification": {
+            "type": "string",
+            "description": "Specific value constrained field that indicates the nature of the reality data. Allowed values: 'Terrain', 'Imagery', 'Pinned', 'Model', 'Undefined'"
+          },
+          "type": {
+            "type": "string",
+            "description": "A key indicating the format of the data. Valid values include '3MX', 'PointCloud', RealityMesh3DTiles', ... See documentation for an exhaustive list of registered types."
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the reality data."
+          },
+          "dataset": {
+            "type": "string",
+            "description": "This field can be used to define a loose grouping of reality data. This property may not contain any control sequence such as a URL or code."
+          },
+          "group": {
+            "type": "string",
+            "description": "The group can be used to define a second level of grouping. This property may not contain any control sequence such as a URL or code."
+          },
+          "rootDocument": {
+            "type": "string",
+            "description": "Used to indicate the root document of the reality data."
+          },
+          "acquisition": {
+            "$ref": "#/components/schemas/acquisition",
+            "description": "Details about data acquisition."
+          },
+          "extent": {
+            "$ref": "#/components/schemas/extent",
+            "description": "The rectangular area on the Earth which encloses the reality data."
+          },
+          "authoring": {
+            "type": "boolean",
+            "description": "A boolean value that is true if the data is being created. It is false if the data has been completely uploaded."
+          }
+        }
+      },
+      "project-association-response": {
+        "type": "object",
+        "title": "Project Association Response",
+        "description": "Ids of associated project and reality data.",
+        "properties": {
+          "projectAssociation": {
+            "$ref": "#/components/schemas/project-association",
+            "description": "Ids of associated project and reality data."
+          }
+        }
+      },
+      "project-association": {
+        "title": "Project Association",
+        "type": "object",
+        "description": "Defines an association between a reality data and a project",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "id of associated reality data."
+          },
+          "projectId": {
+            "type": "string",
+            "description": "id of associated project."
+          }
+        }
+      },
+      "reality-data-project": {
+        "title": "Project Associated to a Reality Data",
+        "type": "object",
+        "description": "Defines a project associated to a reality data.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "id of associated project."
+          },
+          "_links": {
+            "$ref": "#/components/schemas/project-self-link",
+            "description": "The link to get the project's details"
+          }
+        }
+      },
+      "project-self-link": {
+        "title": "Project Details Link",
+        "type": "object",
+        "properties": {
+          "self": {
+            "$ref": "#/components/schemas/link",
+            "description": "The link to get the project details."
+          }
+        }
+      },
+      "reality-data-projects-response": {
+        "title": "List of Projects Associated to a Reality Data",
+        "type": "object",
+        "description": "List of all projects associated to a reality data.",
+        "properties": {
+          "projects": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/reality-data-project"
+            }
+          }
+        }
+      },
+      "container-response": {
+        "type": "object",
+        "title": "Container Details Response",
+        "description": "Container for a reality data.",
+        "properties": {
+          "container": {
+            "$ref": "#/components/schemas/container-details",
+            "description": "Reality Data container properties."
+          }
+        }
+      },
+      "container-details": {
+        "title": "Container Details",
+        "type": "object",
+        "description": "Provides a link and other details for a reality data container",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Type of container. Currently, only 'AzureBlobSasUrl' is supported."
+          },
+          "access": {
+            "type": "string",
+            "description": "Access granted on the container ('Read' or 'Write')",
+            "enum": [
+              "Read",
+              "Write"
+            ]
+          },
+          "_links": {
+            "$ref": "#/components/schemas/container-links",
+            "description": "The link to the container"
+          }
+        }
+      },
+      "container-links": {
+        "title": "Container Links",
+        "type": "object",
+        "description": "The link to the container",
+        "properties": {
+          "containerUrl": {
+            "$ref": "#/components/schemas/container-url",
+            "description": "The URL of the container"
+          }
+        }
+      },
+      "container-url": {
+        "title": "Container URL",
+        "type": "object",
+        "description": "The URL of the container",
+        "properties": {
+          "href": {
+            "type": "string",
+            "description": "The URL"
+          }
+        }
+      },
+      "error-response": {
+        "type": "object",
+        "title": "Error Response",
+        "description": "Gives details for an error that occurred while handling the request. Note that clients MUST NOT assume that every failed request will produce an object of this schema, or that all of the properties in the response will be non-null, as the error may have prevented this response from being constructed.",
+        "properties": {
+          "error": {
+            "description": "Error information.",
+            "$ref": "#/components/schemas/error-message"
+          }
+        },
+        "required": [
+          "error"
+        ]
+      },
+      "error-message": {
+        "type": "object",
+        "description": "Contains error information.",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "One of a server-defined set of error codes."
+          },
+          "message": {
+            "type": "string",
+            "description": "A human-readable representation of the error."
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ]
+      },
+      "DetailedError": {
+        "type": "object",
+        "description": "Contains error information and an array of more specific errors.",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "One of a server-defined set of error codes."
+          },
+          "message": {
+            "type": "string",
+            "description": "A human-readable representation of the error."
+          },
+          "target": {
+            "type": "string",
+            "description": "The target of the error.",
+            "nullable": true
+          },
+          "details": {
+            "type": "array",
+            "description": "Optional array of more specific errors.",
+            "items": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "details"
+        ]
+      },
+      "DetailedErrorResponse": {
+        "type": "object",
+        "title": "Detailed Error Response",
+        "description": "Gives details for an error that occurred while handling the request. Note that clients MUST NOT assume that every failed request will produce an object of this schema, or that all of the properties in the response will be non-null, as the error may have prevented this response from being constructed.",
+        "properties": {
+          "error": {
+            "description": "Error Detailed information.",
+            "$ref": "#/components/schemas/DetailedError"
+          }
+        },
+        "required": [
+          "error"
+        ]
+      },
+      "Error": {
+        "type": "object",
+        "description": "Contains error information.",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "One of a server-defined set of error codes."
+          },
+          "message": {
+            "type": "string",
+            "description": "A human-readable representation of the error."
+          },
+          "target": {
+            "type": "string",
+            "description": "The target of the error.",
+            "nullable": true
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ]
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "title": "Error Response",
+        "description": "Gives details for an error that occurred while handling the request. Note that clients MUST NOT assume that every failed request will produce an object of this schema, or that all of the properties in the response will be non-null, as the error may have prevented this response from being constructed.",
+        "properties": {
+          "error": {
+            "description": "Error information.",
+            "$ref": "#/components/schemas/Error"
+          }
+        },
+        "required": [
+          "error"
+        ]
+      }
+    }
+  }
+}

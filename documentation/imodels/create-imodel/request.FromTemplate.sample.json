@@ -1,0 +1,20 @@
+{
+    "iTwinId": "ad0ba809-9241-48ad-9eb0-c8038c1a1d51",
+    "name": "Sun City Renewable-energy Plant",
+    "description": "Overall model of wind and solar farms in Sun City",
+    "extent": {
+        "southWest":{
+            "latitude": 46.13267702834806,
+            "longitude": 7.672120009938448
+            },
+        "northEast":{
+            "latitude": 46.302763954781234,
+            "longitude": 7.835541640797823
+            }
+        },
+    "template": {
+        "iModelId": "5e19bee0-3aea-4355-a9f0-c6df9989ee7d",
+        "changesetId": "1f2e04b666edce395e37a795e2231e995cbf8349"
+        },
+    "baselineFile": null
+}

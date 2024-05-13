@@ -1,0 +1,25 @@
+{
+  "statusCode": 404,
+  "description": "Specified source iTwin, iModel or Changeset were not found.",
+  "headers": [],
+  "representations": [
+    {
+      "contentType": "application/json;iTwinNotFound",
+      "sample": "iTwinNotFound",
+      "schemaId": "common-errors",
+      "typeName": "ErrorResponse"
+    },
+    {
+      "contentType": "application/json;iModelNotFound",
+      "sample": "iModelNotFound",
+      "schemaId": "common-errors",
+      "typeName": "ErrorResponse"
+    },
+    {
+      "contentType": "application/json;ChangesetNotFound",
+      "sample": "ChangesetNotFound",
+      "schemaId": "common-errors",
+      "typeName": "ErrorResponse"
+    }
+  ]
+}

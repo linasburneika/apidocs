@@ -1,0 +1,26 @@
+{
+    "iModels": [
+      {
+        "id": "5e19bee0-3aea-4355-a9f0-c6df9989ee7d",
+        "displayName": "Sun City Renewable-energy Plant",
+        "dataCenterLocation": "East US"
+      },
+      {
+        "id": "e5692781-32b8-473d-8752-908468f46926",
+        "displayName": "Power Town Processing Plant",
+        "dataCenterLocation": "East US"
+      }
+    ],
+    "_links":
+    {
+        "self": {
+            "href": "https://api.bentley.com/imodels?iTwinId=ad0ba809-9241-48ad-9eb0-c8038c1a1d51&$skip=0&$top=100"
+        },
+        "prev": {
+            "href": "https://api.bentley.com/imodels?iTwinId=ad0ba809-9241-48ad-9eb0-c8038c1a1d51&$skip=0&$top=100"
+        },
+        "next": {
+            "href": "https://api.bentley.com/imodels?iTwinId=ad0ba809-9241-48ad-9eb0-c8038c1a1d51&$skip=100&$top=100"
+        }
+    }
+}

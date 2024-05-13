@@ -1,0 +1,6 @@
+{
+    "error": {
+        "code": "RateLimitExceeded",
+        "message": "Maximum number of briefcases per user per minute reached."
+    }
+}

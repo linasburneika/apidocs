@@ -1,0 +1,11 @@
+{
+    "createOperation": {
+        "state": "scheduled",
+        "clonedFrom": null,
+        "forkedFrom": {
+            "iModelId": "5e19bee0-3aea-4355-a9f0-c6df9989ee7d",
+            "changesetId": "13a61888798b687d41f7c748d7414b428766281f",
+            "relationshipId": "2c80d790-a7d2-4758-91ab-8fb63ac5f81f"
+        }
+    }
+}

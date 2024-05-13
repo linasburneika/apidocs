@@ -1,0 +1,25 @@
+{
+    "error": {
+        "code": "InvalidiModelsRequest",
+        "message": "Cannot upload Thumbnail.",
+        "details": [
+            {
+                "code": "InvalidRequestBody",
+                "message": "Invalid Thumbnail format. Please use one of the supported media formats: 'image/jpeg', 'image/png'.",
+                "innerError": {
+                    "code": "InvalidThumbnailFormat"
+                }
+            },
+            {
+                "code": "MissingRequiredHeader",
+                "message": "Required header is missing.",
+                "target": "content-type"
+            },
+            {
+                "code": "InvalidHeaderValue",
+                "message": "'image/gif' is not supported 'content-type'. Supported media types are 'image/jpeg', 'image/png'.",
+                "target": "content-type"
+            }
+        ]
+    }
+}

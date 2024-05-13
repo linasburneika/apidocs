@@ -1,0 +1,23 @@
+{
+  "error": {
+    "code": "InvalidiTwinsRequest",
+    "message": "Cannot query iTwin Repositories.",
+    "details": [
+      {
+        "code": "InvalidValue",
+        "message": "A valid iTwin Repository Class was not specified in the query.",
+        "target": "class"
+      },
+      {
+        "code": "InvalidValue",
+        "message": "A valid iTwin Repository SubClass was not specified in the query.",
+        "target": "subClass"
+      },
+      {
+        "code": "InvalidValue",
+        "message": "iTwinId contains an invalid value.",
+        "target": "iTwinId"
+      }
+    ]
+  }
+}

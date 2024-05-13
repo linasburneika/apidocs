@@ -1,0 +1,37 @@
+{
+    "statusCode": 409,
+    "description": "iModel is not initialzied, a Changeset with the same id already exists, 'parentId' property value does not point to the latest changes or another user is currently in a process of pushing a changeset.",
+    "headers": [],
+    "representations": [
+        {
+            "contentType": "application/json;NewerChangesExist",
+            "sample": "NewerChangesExist",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        },
+        {
+            "contentType": "application/json;ChangesetExists",
+            "sample": "ChangesetExists",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        },
+        {
+            "contentType": "application/json;ConflictWithAnotherUser",
+            "sample": "ConflictWithAnotherUser",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        },
+        {
+            "contentType": "application/json;iModelNotInitialized",
+            "sample": "iModelNotInitialized",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        },
+        {
+            "contentType": "application/json;ChangesetGroupClosed",
+            "sample": "ChangesetGroupClosed",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+      }
+    ]
+}

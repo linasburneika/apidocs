@@ -1,0 +1,25 @@
+{
+    "extendedData": [
+        {
+            "changesetId": "78c09f3337370b26acabead1790d77b2a6ebc6ee",
+            "changesetIndex": 1,
+            "data": "ewogICJkYXRhIjogewogICAgImNoYW5nZWRGaWxlcyI6IFsKICAgICAgIkEuZGduIiwKICAgICAgIkIuZGduIgogICAgXSwKICAgICJ0YXNrSWQiOiAiZGIxNGY4MzUtOGQxYy00YjU2LTkyMzUtNzE1ZWJkMjMzODE0IgogIH0KfQ=="
+        },
+        {
+            "changesetId": "a1ecbdc8c4f6173004f9f881914a57c5511a362b",
+            "changesetIndex": 2,
+            "data": "ewogICJkYXRhIjogewogICAgImNoYW5nZWRGaWxlcyI6IFsKICAgICAgIkEuZGduIiwKICAgICAgIkIuZGduIgogICAgXSwKICAgICJ0YXNrSWQiOiAiZGIxNGY4MzUtOGQxYy00YjU2LTkyMzUtNzE1ZWJkMjMzODE0IgogIH0KfQ=="
+        }
+    ],
+    "_links": {
+        "self": {
+            "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/changesets/extendeddata?$skip=100&$top=100"
+        },
+        "prev": { 
+            "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/changesets/extendeddata?$skip=0&$top=100"
+        },
+        "next": {
+            "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/changesets/extendeddata?$skip=200&$top=100"
+        }
+    }
+}

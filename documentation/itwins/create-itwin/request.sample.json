@@ -1,0 +1,10 @@
+{
+    "class": "Endeavor",
+    "subClass": "Project",
+    "type": "Construction Project",
+    "number": "iTwin #",
+    "displayName": "my iTwin 2",
+	"geographicLocation": "Exton, PA",
+    "dataCenterLocation": "East US",
+    "status": "Active"
+}

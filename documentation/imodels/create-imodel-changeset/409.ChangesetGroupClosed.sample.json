@@ -1,0 +1,6 @@
+{
+    "error": {
+        "code": "ChangesetGroupIsClosed",
+        "message": "Requested Changeset Group is closed."
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "error": {
+        "code": "InvalidiModelsRequest",
+        "message": "Cannot create Changeset.",
+        "details": [
+            {
+                "code": "InvalidValue",
+                "message": "Provided 'fileSize' value is not valid. 'fileSize' must be a non-negative integer value.",
+                "target": "fileSize"
+            },
+            {
+                "code": "MissingRequiredProperty",
+                "message": "Required property is missing.",
+                "target": "id"
+            },
+            {
+                "code": "InvalidRequestBody",
+                "message": "Failed to parse request body. Make sure it is a valid JSON."
+            }
+        ]
+    }
+}
