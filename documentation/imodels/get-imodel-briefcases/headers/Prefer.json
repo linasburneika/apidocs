@@ -1,0 +1,11 @@
+{
+    "name": "Prefer",
+    "description": "Indicates a level of details in the response. This operation supports 'return=representation' and 'return=minimal' preferences.",
+    "type": "string",
+    "defaultValue": "return=minimal",
+    "required": false,
+    "values": [
+      "return=minimal",
+      "return=representation"
+    ]
+}

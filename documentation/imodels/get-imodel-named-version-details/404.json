@@ -1,0 +1,19 @@
+{
+    "statusCode": 404,
+    "description": "Requested iModel or Named Version was not found.",
+    "headers": [],
+    "representations": [
+        {
+            "contentType": "application/json;iModelNotFound",
+            "sample": "iModelNotFound",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        },
+        {
+            "contentType": "application/json;NamedVersionNotFound",
+            "sample": "NamedVersionNotFound",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        }
+    ]
+}

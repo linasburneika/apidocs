@@ -1,0 +1,13 @@
+{
+  "statusCode": 422,
+  "description": "Invalid request to get reality data details",
+  "headers": [],
+  "representations": [
+    {
+      "contentType": "application/json",
+      "sample": "",
+      "schemaId": "schema",
+      "typeName": "error-response"    
+    }
+  ]
+}

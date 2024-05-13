@@ -1,0 +1,2398 @@
+{
+  "components": {
+    "schemas": {
+      "iModelResponse": {
+        "type": "object",
+        "title": "iModel Response",
+        "description": "Container for iModel object.",
+        "properties": {
+          "iModel": {
+            "$ref": "#/components/schemas/iModel",
+            "description": "iModel properties."
+          }
+        }
+      },
+      "CreatediModelResponse": {
+        "type": "object",
+        "title": "Created iModel Response",
+        "description": "Container for iModel object.",
+        "properties": {
+          "iModel": {
+            "$ref": "#/components/schemas/CreatediModel",
+            "description": "iModel properties."
+          }
+        }
+      },
+      "iModelSummary": {
+        "type": "object",
+        "title": "iModel (summary)",
+        "description": "Summarized representation of the iModel.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Id of the iModel"
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display name of the iModel. Corresponds to Name property."
+          },
+          "dataCenterLocation": {
+            "type": "string",
+            "description": "The data center where the data for this iModel is persisted. It will be the same as the iTwin data center, unless that data center is not supported or was not supported when the first iTwin iModel was created. All iTwin iModels are in the same region. Default is East US. Possible Values: Australia East, Canada Central, East US, Japan East, North Europe, South Africa North, Southeast Asia, UK South."
+          }
+        }
+      },
+      "iModel": {
+        "type": "object",
+        "description": "Full representation of the iModel.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Id of the iModel"
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display name of the iModel. Corresponds to Name property."
+          },
+          "dataCenterLocation": {
+            "type": "string",
+            "description": "The data center where the data for this iModel is persisted. It will be the same as the iTwin data center, unless that data center is not supported or was not supported when the first iTwin iModel was created. All iTwin iModels are in the same region. Default is East US. Possible Values: Australia East, Canada Central, East US, Japan East, North Europe, South Africa North, Southeast Asia, UK South."
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the iModel."
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Description of the iModel."
+          },
+          "createdDateTime": {
+            "type": "string",
+            "description": "Date when the iModel was created."
+          },
+          "iTwinId": {
+            "type": "string",
+            "description": "Id of the iTwin that iModel belongs to."
+          },
+          "isSecured": {
+            "type": "boolean",
+            "description": "Indicates if permissions at the iModel level are configured. `true` - iModel level permissions are configured. Permissions at iModel level override the iTwin level permissions. `false` - iModel permissions are not configured and the iTwin level permissions are applied."
+          },
+          "extent": {
+            "$ref": "#/components/schemas/Extent",
+            "description": "The maximum rectangular area on the Earth which encloses the iModel. The maximum extent is used to help keep your iModel clean. When new elements are imported, those outside the extent will be flagged for further processing. This extent will also help to zoom to the area of interest in web viewers."
+          },
+          "state": {
+            "type": "string",
+            "description": "Indicates the state of the iModel. Possible values: 'initialized', 'notInitialized'.",
+            "enum": [
+              "initialized",
+              "notInitialized"
+            ]
+          },
+          "_links": {
+            "$ref": "#/components/schemas/iModelLinks",
+            "description": "Contains the hyperlinks to the related data of the iModel."
+          }
+        }
+      },
+      "CreatediModel": {
+        "type": "object",
+        "description": "Full representation of the iModel.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Id of the iModel"
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display name of the iModel. Corresponds to Name property."
+          },
+          "dataCenterLocation": {
+            "type": "string",
+            "description": "The data center where the data for this iModel is persisted. It will be the same as the iTwin data center, unless that data center is not supported or was not supported when the first iTwin iModel was created. All iTwin iModels are in the same region. Default is East US. Possible Values: Australia East, Canada Central, East US, Japan East, North Europe, South Africa North, Southeast Asia, UK South."
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the iModel."
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Description of the iModel."
+          },
+          "createdDateTime": {
+            "type": "string",
+            "description": "Date when the iModel was created."
+          },
+          "iTwinId": {
+            "type": "string",
+            "description": "Id of the iTwin that iModel belongs to."
+          },
+          "isSecured": {
+            "type": "boolean",
+            "description": "Indicates if permissions at the iModel level are configured. `true` - iModel level permissions are configured. Permissions at iModel level override the iTwin level permissions. `false` - iModel permissions are not configured and the iTwin level permissions are applied."
+          },
+          "extent": {
+            "description": "The maximum rectangular area on the Earth which encloses the iModel. The maximum extent is used to help keep your iModel clean. When new elements are imported, those outside the extent will be flagged for further processing. This extent will also help to zoom to the area of interest in web viewers.",
+            "$ref": "#/components/schemas/Extent"
+          },
+          "state": {
+            "type": "string",
+            "description": "Indicates the state of the iModel. Possible values: 'initialized', 'notInitialized'.",
+            "enum": [
+              "initialized",
+              "notInitialized"
+            ]
+          },
+          "_links": {
+            "$ref": "#/components/schemas/CreatediModelLinks",
+            "description": "Contains the hyperlinks to the related data of the iModel."
+          }
+        }
+      },
+      "iModelCreate": {
+        "type": "object",
+        "title": "iModel (create)",
+        "description": "Properties of the iModel to be created.",
+        "properties": {
+          "iTwinId": {
+            "type": "string",
+            "description": "Id of the iTwin that created iModel should belong to."
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the iModel."
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Description of the iModel."
+          },
+          "extent": {
+            "$ref": "#/components/schemas/Extent",
+            "description": "The maximum rectangular area on the Earth which encloses the iModel. The maximum extent is used to help keep your iModel clean. When new elements are imported, those outside the extent will be flagged for further processing. This extent will also help to zoom to the area of interest in web viewers."
+          },
+          "template": {
+            "$ref": "#/components/schemas/iModelTemplate",
+            "description": "When specified creates the iModel using another iModel as a template."
+          },
+          "baselineFile": {
+            "$ref": "#/components/schemas/BaselineFileCreate",
+            "description": "When specified creates the iModel using a custom Baseline File."
+          }
+        },
+        "required": [
+          "name",
+          "iTwinId"
+        ]
+      },
+      "iModelUpdate": {
+        "type": "object",
+        "title": "iModel (update)",
+        "description": "Properties of the iModel to be updated.",
+        "properties": {
+          "name": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Name of the iModel."
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Description of the iModel."
+          },
+          "extent": {
+            "$ref": "#/components/schemas/Extent",
+            "description": "The maximum rectangular area on the Earth which encloses the iModel. The maximum extent is used to help keep your iModel clean. When new elements are imported, those outside the extent will be flagged for further processing. This extent will also help to zoom to the area of interest in web viewers."
+          }
+        }
+      },
+      "iModelsMinimal": {
+        "type": "object",
+        "title": "iModels (prefer return=minimal)",
+        "description": "List of iModels.",
+        "properties": {
+          "iModels": {
+            "type": "array",
+            "description": "List of iModels.",
+            "items": {
+              "$ref": "#/components/schemas/iModelSummary"
+            }
+          },
+          "_links": {
+            "$ref": "#/components/schemas/PagingLinks",
+            "description": "Contains the hyperlinks to the previous and next pages of results."
+          }
+        }
+      },
+      "iModelsRepresentation": {
+        "type": "object",
+        "title": "iModels (prefer return=representation)",
+        "description": "List of iModels.",
+        "properties": {
+          "iModels": {
+            "type": "array",
+            "description": "List of iModels.",
+            "items": {
+              "$ref": "#/components/schemas/iModel"
+            }
+          },
+          "_links": {
+            "$ref": "#/components/schemas/PagingLinks",
+            "description": "Contains the hyperlinks to the previous and next pages of results."
+          }
+        }
+      },
+      "iModelTemplate": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "title": "iModel Template",
+        "description": "Used for specifying the iModel template during iModel creation.",
+        "properties": {
+          "iModelId": {
+            "type": "string",
+            "description": "Id of the iModel which to use as a template."
+          },
+          "changesetId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "iModel timeline point to use as a template identified by the Changeset. When Changeset is not provided baseline is used."
+          }
+        },
+        "required": [
+          "iModelId"
+        ]
+      },
+      "BaselineFileCreate": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "title": "Baseline File",
+        "description": "Used for describing Baseline File during iModel creation.",
+        "properties": {
+          "size": {
+            "type": "integer",
+            "format": "int64",
+            "description": "Size of the Baseline File in bytes. It is important to set accurate file size or the iModel creation will fail later."
+          }
+        },
+        "required": [
+          "size"
+        ]
+      },
+      "BaselineFileResponse": {
+        "type": "object",
+        "title": "Baseline File Response",
+        "description": "Container for Baseline File object.",
+        "properties": {
+          "baselineFile": {
+            "$ref": "#/components/schemas/BaselineFile",
+            "description": "Baseline File properties."
+          }
+        }
+      },
+      "BaselineFile": {
+        "type": "object",
+        "title": "Baseline File",
+        "description": "Metadata of Baseline File of the iModel.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Id of the Baseline File."
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Name of the Baseline File."
+          },
+          "fileSize": {
+            "type": "integer",
+            "format": "int64",
+            "description": "Size of the Baseline File in bytes."
+          },
+          "state": {
+            "type": "string",
+            "description": "Indicates the state of the Baseline File. 'initialized' - Baseline File is initialized. 'initializationScheduled' - Baseline File creation is complete and initialization is scheduled or currently in progress. 'waitingForFile' - file upload to file storage hasn't been completed yet. 'initializationFailed' - initializing Baseline File failed. 'fileIsBriefcase' - file is not a standalone iModel and cannot be used as a Baseline File.",
+            "enum": [
+              "initialized",
+              "initializationScheduled",
+              "initializationFailed",
+              "waitingForFile",
+              "fileIsBriefcase"
+            ]
+          },
+          "_links": {
+            "$ref": "#/components/schemas/BaselineFileLinks",
+            "description": "Contains the hyperlinks to the related data of the Baseline File."
+          }
+        }
+      },
+      "BriefcaseResponse": {
+        "type": "object",
+        "title": "Briefcase Response",
+        "description": "Container for Briefcase object.",
+        "properties": {
+          "briefcase": {
+            "$ref": "#/components/schemas/Briefcase",
+            "description": "Briefcase properties."
+          }
+        }
+      },
+      "BriefcaseAcquire": {
+        "type": "object",
+        "title": "Briefcase (acquire)",
+        "description": "Properties of the Briefcase to be acquired.",
+        "properties": {
+          "deviceName": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Name of the device which will hold the briefcase."
+          }
+        }
+      },
+      "BriefcaseSummary": {
+        "type": "object",
+        "title": "Briefcase (summary)",
+        "description": "Summarized representation of the Briefcase.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Id of the Briefcase."
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display name of the Briefcase. Corresponds to id and deviceName properties."
+          }
+        }
+      },
+      "Briefcase": {
+        "type": "object",
+        "description": "Briefcase is a file holding a copy of an iModel.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Id of the Briefcase."
+          },
+          "briefcaseId": {
+            "type": "integer",
+            "description": "Id of the Briefcase as an integer."
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display name of the Briefcase. Corresponds to id and deviceName properties."
+          },
+          "acquiredDateTime": {
+            "type": "string",
+            "description": "Date when the Briefcase was acquired."
+          },
+          "fileSize": {
+            "type": "integer",
+            "description": "**DEPRECATED** Size of the Briefcase in bytes."
+          },
+          "deviceName": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Name of the device which will hold the Briefcase."
+          },
+          "application": {
+            "$ref": "#/components/schemas/Application",
+            "description": "Information about the application that acquired the Briefcase."
+          },
+          "_links": {
+            "$ref": "#/components/schemas/BriefcaseLinks",
+            "description": "Contains the hyperlinks to the related data of the Briefcase."
+          }
+        }
+      },
+      "BriefcasesMinimal": {
+        "type": "object",
+        "title": "Briefcases (prefer return=minimal)",
+        "description": "List of Briefcases in minimal representation.",
+        "properties": {
+          "Briefcases": {
+            "type": "array",
+            "description": "Briefcases of the iModel.",
+            "items": {
+              "$ref": "#/components/schemas/BriefcaseSummary"
+            }
+          }
+        }
+      },
+      "BriefcasesRepresentation": {
+        "type": "object",
+        "title": "Briefcases (prefer return=representation)",
+        "description": "List of Briefcases in full representation.",
+        "properties": {
+          "Briefcases": {
+            "type": "array",
+            "description": "Briefcases of the iModel.",
+            "items": {
+              "$ref": "#/components/schemas/Briefcase"
+            }
+          }
+        }
+      },
+      "CheckpointResponse": {
+        "type": "object",
+        "title": "Checkpoint Response",
+        "description": "Container for Checkpoint object.",
+        "properties": {
+          "checkpoint": {
+            "$ref": "#/components/schemas/Checkpoint",
+            "description": "Checkpoint properties."
+          }
+        }
+      },
+      "Checkpoint": {
+        "type": "object",
+        "title": "Checkpoint",
+        "description": "Metadata of a Checkpoint.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Id of the Checkpoint."
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display name of the Checkpoint. Corresponds to `changesetIndex` property."
+          },
+          "changesetIndex": {
+            "type": "integer",
+            "format": "int64",
+            "description": "Index of the target changeset."
+          },
+          "changesetId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Id of the target changeset."
+          },
+          "state": {
+            "type": "string",
+            "description": "Indicates the state of the Checkpoint. `successful` - Checkpoint is successfully generated. `scheduled` - Checkpoint generation is scheduled or already in progress. `failed` - Checkpoint generation has failed. `notGenerated` - Checkpoint was not generated.",
+            "enum": [
+              "successful",
+              "scheduled",
+              "failed",
+              "notGenerated"
+            ]
+          },
+          "containerAccessInfo": {
+            "$ref": "#/components/schemas/ContainerAccessInfo",
+            "description": "Contains information required to access an Azure Blob storage container. **Important: This property should only be used by iTwin.js libraries.**"
+          },
+          "_links": {
+            "$ref": "#/components/schemas/CheckpointLinks",
+            "description": "Contains the hyperlinks to the related data of the Checkpoint."
+          }
+        }
+      },
+      "ContainerAccessInfo": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "title": "Container Access Information",
+        "description": "Contains information required to access an Azure Blob storage container.",
+        "properties": {
+          "account": {
+            "type": "string",
+            "description": "Name of the account."
+          },
+          "container": {
+            "type": "string",
+            "description": "Name of the container."
+          },
+          "sas": {
+            "type": "string",
+            "description": "Shared access signature."
+          },
+          "dbName": {
+            "type": "string",
+            "description": "Database name."
+          }
+        }
+      },
+      "ChangesetCreate": {
+        "type": "object",
+        "title": "Changeset (create)",
+        "description": "Properties of Changeset to be created.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Id of the changeset."
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Description of the Changeset."
+          },
+          "parentId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Id of the parent Changeset."
+          },
+          "briefcaseId": {
+            "type": "integer",
+            "description": "Id of the briefcase that will be used to create the Changeset."
+          },
+          "groupId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Id of the [Changeset Group](https://developer.bentley.com/apis/imodels-v2/operations/create-imodel-changeset-group/) that the Changeset belongs to."
+          },
+          "fileSize": {
+            "type": "integer",
+            "description": "Size of the Changeset file in bytes."
+          },
+          "containingChanges": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "Describes what type of changes Changeset contains. Tells what changes changeset contains. 0 - regular, 1 - schema, 2 - definition, 4 - spatial data, 8 - sheets and drawings, 16 - views and models, 32 - global properties. ContainingChanges is flag value, therefore all change types, except Schema, can be combined."
+          },
+          "synchronizationInfo": {
+            "$ref": "#/components/schemas/SynchronizationInfoCreate",
+            "description": "Optional information about synchronization that is related to the Changeset."
+          }
+        },
+        "required": [
+          "id",
+          "briefcaseId",
+          "fileSize"
+        ]
+      },
+      "ChangesetUpdate": {
+        "type": "object",
+        "title": "Changeset (update)",
+        "description": "Properties of Changeset to be updated.",
+        "properties": {
+          "briefcaseId": {
+            "type": "integer",
+            "description": "Id of the briefcase that was used to create the Changeset."
+          },
+          "state": {
+            "type": "string",
+            "description": "Indicates the state of the Changeset. Should be set to 'fileUploaded'.",
+            "enum": [
+              "waitingForFile",
+              "fileUploaded"
+            ]
+          }
+        },
+        "required": [
+          "briefcaseId",
+          "state"
+        ]
+      },
+      "ChangesetResponse": {
+        "type": "object",
+        "title": "Changeset Response",
+        "description": "Container for Changeset object.",
+        "properties": {
+          "changeset": {
+            "$ref": "#/components/schemas/Changeset",
+            "description": "Changeset properties."
+          }
+        }
+      },
+      "CreatedChangesetResponse": {
+        "type": "object",
+        "title": "Created Changeset Response",
+        "description": "Container for Created Changeset object.",
+        "properties": {
+          "changeset": {
+            "$ref": "#/components/schemas/CreatedChangeset",
+            "description": "Changeset properties."
+          }
+        }
+      },
+      "ChangesetSummary": {
+        "type": "object",
+        "title": "Changeset (summary)",
+        "description": "Summarized representation of the Changeset.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Id of the changeset."
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display name of the Changeset. Corresponds to Index property."
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Description of the Changeset."
+          },
+          "index": {
+            "type": "integer",
+            "description": "Index of the Changeset (increasing, but not necessarily sequential)."
+          },
+          "parentId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Id of the parent Changeset."
+          },
+          "creatorId": {
+            "type": "string",
+            "description": "Id of the user who created the Changeset."
+          },
+          "pushDateTime": {
+            "type": "string",
+            "description": "Date when the Changeset was pushed to iModelHub."
+          },
+          "briefcaseId": {
+            "type": "integer",
+            "description": "Id of the briefcase that was used to push the Changeset."
+          },
+          "groupId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Id of the [Changeset Group](https://developer.bentley.com/apis/imodels-v2/operations/create-imodel-changeset-group/) that the Changeset belongs to."
+          },
+          "fileSize": {
+            "type": "integer",
+            "description": "Size of the Changeset file in bytes."
+          },
+          "containingChanges": {
+            "type": "integer",
+            "description": "Describes what type of changes Changeset contains. Tells what changes changeset contains. 0 - regular, 1 - schema, 2 - definition, 4 - spatial data, 8 - sheets and drawings, 16 - views and models, 32 - global properties. ContainingChanges is flag value, therefore all change types, except Schema, can be combined."
+          },
+          "state": {
+            "type": "string",
+            "description": "Indicates the state of the Changeset. 'waitingForFile' - indicates that Changeset metadata is created, but Changeset file is not uploaded yet or file upload is not confirmed yet. 'fileUploaded' - indicates that Changeset file is uploaded and confirmed.",
+            "enum": [
+              "waitingForFile",
+              "fileUploaded"
+            ]
+          },
+          "_links": {
+            "$ref": "#/components/schemas/ChangesetLinksSummary",
+            "description": "Contains the hyperlinks to the related data of the Changeset."
+          }
+        }
+      },
+      "Changeset": {
+        "type": "object",
+        "description": "Changeset represents a file containing changes to the iModel. A single Changeset contains changes made on a single Briefcase file and pushed as a single file.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Id of the Changeset."
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display name of the Changeset. Corresponds to Index property."
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Description of the Changeset."
+          },
+          "index": {
+            "type": "integer",
+            "description": "Index of the Changeset (increasing, but not necessarily sequential)."
+          },
+          "parentId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Id of the parent Changeset."
+          },
+          "creatorId": {
+            "type": "string",
+            "description": "Id of the user who created the Changeset."
+          },
+          "pushDateTime": {
+            "type": "string",
+            "description": "Date when the Changeset was pushed to iModelHub."
+          },
+          "briefcaseId": {
+            "type": "integer",
+            "description": "Id of the briefcase that was used to push the Changeset."
+          },
+          "groupId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Id of the [Changeset Group](https://developer.bentley.com/apis/imodels-v2/operations/create-imodel-changeset-group/) that the Changeset belongs to."
+          },
+          "fileSize": {
+            "type": "integer",
+            "description": "Size of the Changeset file in bytes."
+          },
+          "containingChanges": {
+            "type": "integer",
+            "description": "Describes what type of changes Changeset contains. Tells what changes changeset contains. 0 - regular, 1 - schema, 2 - definition, 4 - spatial data, 8 - sheets and drawings, 16 - views and models, 32 - global properties. ContainingChanges is flag value, therefore all change types, except Schema, can be combined."
+          },
+          "state": {
+            "type": "string",
+            "description": "Indicates the state of the Changeset. 'waitingForFile' - indicates that Changeset metadata is created, but Changeset file is not uploaded yet or file upload is not confirmed yet. 'fileUploaded' - indicates that Changeset file is uploaded and confirmed.",
+            "enum": [
+              "waitingForFile",
+              "fileUploaded"
+            ]
+          },
+          "application": {
+            "$ref": "#/components/schemas/Application",
+            "description": "Information about the application that pushed the Changeset."
+          },
+          "synchronizationInfo": {
+            "$ref": "#/components/schemas/SynchronizationInfo",
+            "description": "Optional information about synchronization that is related to the Changeset."
+          },
+          "_links": {
+            "$ref": "#/components/schemas/ChangesetLinks",
+            "description": "Contains the hyperlinks to the related data of the Changeset."
+          }
+        }
+      },
+      "CreatedChangeset": {
+        "type": "object",
+        "title": "Created Changeset",
+        "description": "Changeset represents a file containing changes to the iModel. A single Changeset contains changes made on a single Briefcase file and pushed as a single file.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Id of the changeset."
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display name of the Changeset. Corresponds to Index property."
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Description of the Changeset."
+          },
+          "index": {
+            "type": "integer",
+            "description": "Index of the Changeset (increasing, but not necessarily sequential)."
+          },
+          "parentId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Id of the parent Changeset."
+          },
+          "creatorId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Id of the user who created the Changeset."
+          },
+          "pushDateTime": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Date when the Changeset was pushed to iModelHub."
+          },
+          "briefcaseId": {
+            "type": "integer",
+            "description": "Id of the briefcase that was used to push the Changeset."
+          },
+          "groupId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Id of the [Changeset Group](https://developer.bentley.com/apis/imodels-v2/operations/create-imodel-changeset-group/) that the Changeset belongs to."
+          },
+          "fileSize": {
+            "type": "integer",
+            "description": "Size of the Changeset file in bytes."
+          },
+          "containingChanges": {
+            "type": "integer",
+            "description": "Describes what type of changes Changeset contains. 0 - regular, 1 - schema, 2 - definition, 4 - spatial data, 8 - sheets and drawings, 16 - views and models, 32 - global properties. ContainingChanges is flag value, therefore all change types, except Schema, can be combined."
+          },
+          "state": {
+            "type": "string",
+            "description": "Indicates the state of the Changeset. 'waitingForFile' - indicates that Changeset metadata is created, but Changeset file is not uploaded yet or file upload is not confirmed yet. 'fileUploaded' - indicates that Changeset file is uploaded and confirmed.",
+            "enum": [
+              "waitingForFile",
+              "fileUploaded"
+            ]
+          },
+          "application": {
+            "$ref": "#/components/schemas/Application",
+            "description": "Information about the application that pushed the Changeset."
+          },
+          "synchronizationInfo": {
+            "$ref": "#/components/schemas/SynchronizationInfo",
+            "description": "Optional information about synchronization that is related to the Changeset."
+          },
+          "_links": {
+            "$ref": "#/components/schemas/CreatedChangesetLinks",
+            "description": "Contains the hyperlinks to the related data of the Changeset."
+          }
+        }
+      },
+      "ChangesetsMinimal": {
+        "type": "object",
+        "title": "Changesets (prefer return=minimal)",
+        "description": "List of Changesets in minimal representation.",
+        "properties": {
+          "changesets": {
+            "type": "array",
+            "description": "Changesets of the iModel.",
+            "items": {
+              "$ref": "#/components/schemas/ChangesetSummary"
+            }
+          }
+        }
+      },
+      "ChangesetsRepresentation": {
+        "type": "object",
+        "title": "Changesets (prefer return=representation)",
+        "description": "List of Changesets in full representation.",
+        "properties": {
+          "changesets": {
+            "type": "array",
+            "description": "Changesets of the iModel.",
+            "items": {
+              "$ref": "#/components/schemas/Changeset"
+            }
+          }
+        }
+      },
+      "ChangesetExtendedData": {
+        "type": "object",
+        "title": "Changeset Extended Data",
+        "description": "Metadata of Changeset Extended Data.",
+        "properties": {
+          "changesetIndex": {
+            "type": "integer",
+            "format": "int64",
+            "description": "Index of the changeset."
+          },
+          "changesetId": {
+            "type": [
+              "string"
+            ],
+            "description": "Id of the Changeset the extended data is associated to."
+          },
+          "data": {
+            "type": "string",
+            "description": "Application specific valid json object encoded as base64 string. Maximum supported size is 204800 bytes."
+          }
+        }
+      },
+      "ChangesetExtendedDataResponse": {
+        "type": "object",
+        "title": "Changeset Extended Data Response",
+        "description": "Container for Changeset Extended Data object.",
+        "properties": {
+          "extendeddata": {
+            "$ref": "#/components/schemas/ChangesetExtendedData",
+            "description": "Changeset Extended Data properties."
+          }
+        }
+      },
+      "ChangesetExtendedDataListResponse": {
+        "type": "object",
+        "title": "Changesets Extended Data Response",
+        "description": "List of Changesets Extended Data entries.",
+        "properties": {
+          "extendeddata": {
+            "type": "array",
+            "description": "Changesets Extended Data entries of the iModel.",
+            "items": {
+              "$ref": "#/components/schemas/ChangesetExtendedData"
+            }
+          },
+          "_links": {
+            "$ref": "#/components/schemas/PagingLinks",
+            "description": "Contains the hyperlinks to the previous and next pages of results."
+          }
+        }
+      },
+      "ChangesetExtendedDataCreate": {
+        "type": "object",
+        "title": "Changeset Extended Data (create)",
+        "description": "Properties of Changeset to be created.",
+        "properties": {
+          "data": {
+            "type": "string",
+            "description": "Application specific valid json object encoded as base64 string. Maximum supported size is 204800 bytes."
+          }
+        },
+        "required": [
+          "data"
+        ]
+      },
+      "NamedVersionResponse": {
+        "type": "object",
+        "title": "Named Version Response",
+        "description": "Container for Named Version object.",
+        "properties": {
+          "namedVersion": {
+            "$ref": "#/components/schemas/NamedVersion",
+            "description": "Named Version properties."
+          }
+        }
+      },
+      "NamedVersionCreate": {
+        "type": "object",
+        "title": "Named Version (create)",
+        "description": "Properties of the Named Version to be created.",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Named Version name."
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Description of the Named Version."
+          },
+          "changesetId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Id of the Changeset that the Named Version will be created for. If not provided a baseline iModel Named Version will be created."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "NamedVersionUpdate": {
+        "type": "object",
+        "title": "Named Version (update)",
+        "description": "Properties of the Named Version to be updated.",
+        "properties": {
+          "name": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Named Version name."
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Description of the Named Version."
+          },
+          "state": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Indicates the state of the named version. 'hidden' - indicates that Named Version should be hidden in the user interface. 'visible' - indicates that Named Version should be visible in the user interface.",
+            "enum": [
+              "hidden",
+              "visible"
+            ]
+          }
+        }
+      },
+      "NamedVersionSummary": {
+        "type": "object",
+        "title": "Named Version (summary)",
+        "description": "Summarized representation of the Named Version.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Id of the Named Version."
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display name of the Named Version. Corresponds to Name property."
+          },
+          "changesetId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Id of the Changeset that the Named Version is created for."
+          },
+          "changesetIndex": {
+            "type": "integer",
+            "format": "int64",
+            "description": "Index of the Changeset that the Named Version is created for."
+          }
+        }
+      },
+      "NamedVersionsMinimal": {
+        "type": "object",
+        "title": "Named Versions (prefer return=minimal)",
+        "description": "List of Named Versions in minimal representation.",
+        "properties": {
+          "namedVersions": {
+            "type": "array",
+            "description": "List of Named Versions of the iModel.",
+            "items": {
+              "$ref": "#/components/schemas/NamedVersionSummary"
+            }
+          },
+          "_links": {
+            "$ref": "#/components/schemas/PagingLinks",
+            "description": "Contains the hyperlinks to the previous and next pages of results."
+          }
+        }
+      },
+      "NamedVersionsRepresentation": {
+        "type": "object",
+        "title": "Named Versions (prefer return=representation)",
+        "description": "List of Named Versions in full representation.",
+        "properties": {
+          "namedVersions": {
+            "type": "array",
+            "description": "List of Named Versions of the iModel.",
+            "items": {
+              "$ref": "#/components/schemas/NamedVersion"
+            }
+          },
+          "_links": {
+            "$ref": "#/components/schemas/PagingLinks",
+            "description": "Contains the hyperlinks to the previous and next pages of results."
+          }
+        }
+      },
+      "NamedVersion": {
+        "type": "object",
+        "title": "Named Version",
+        "description": "Full representation of the Named Version.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Id of the Named Version."
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display name of the Named Version. Corresponds to Name property."
+          },
+          "changesetId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Id of the Changeset that the Named Version is created for."
+          },
+          "changesetIndex": {
+            "type": "integer",
+            "format": "int64",
+            "description": "Index of the Changeset that the Named Version is created for."
+          },
+          "name": {
+            "type": "string",
+            "description": "Named Version name."
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Description of the Named Version."
+          },
+          "createdDateTime": {
+            "type": "string",
+            "description": "Date when the Named Version was created."
+          },
+          "state": {
+            "type": "string",
+            "description": "Indicates the state of the named version. 'hidden' - indicates that Named Version should be hidden in the user interface. 'visible' - indicates that Named Version should be visible in the user interface.",
+            "enum": [
+              "hidden",
+              "visible"
+            ]
+          },
+          "application": {
+            "$ref": "#/components/schemas/Application",
+            "description": "Information about the application that acquired the Briefcase."
+          },
+          "_links": {
+            "$ref": "#/components/schemas/NamedVersionLinks",
+            "description": "Contains the hyperlinks to the related data of the Named Version."
+          }
+        }
+      },
+      "UserResponse": {
+        "type": "object",
+        "title": "User Response",
+        "description": "Container for user object.",
+        "properties": {
+          "user": {
+            "$ref": "#/components/schemas/User",
+            "description": "User properties."
+          }
+        }
+      },
+      "UserSummary": {
+        "type": "object",
+        "title": "User (summary)",
+        "description": "Summarized representation of the user.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Id of the user."
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display name of the user. Corresponds to Email property."
+          },
+          "_links": {
+            "$ref": "#/components/schemas/UserLinks",
+            "description": "Contains the hyperlinks to the related data of the User."
+          }
+        }
+      },
+      "User": {
+        "type": "object",
+        "description": "Full representation of the user.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Id of the user."
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display name of the user. Corresponds to Email property."
+          },
+          "givenName": {
+            "type": "string",
+            "description": "Given name of the user."
+          },
+          "surname": {
+            "type": "string",
+            "description": "Surname of the user."
+          },
+          "email": {
+            "type": "string",
+            "description": "E-mail address of the user."
+          },
+          "statistics": {
+            "$ref": "#/components/schemas/UserStatistics",
+            "description": "Contains usage statistics about the user."
+          },
+          "_links": {
+            "$ref": "#/components/schemas/UserLinks",
+            "description": "Contains the hyperlinks to the related data of the User."
+          }
+        }
+      },
+      "UsersMinimal": {
+        "type": "object",
+        "title": "Users (prefer return=minimal)",
+        "description": "List of users in minimal representation.",
+        "properties": {
+          "Users": {
+            "type": "array",
+            "description": "List of users who have ever been connected to the iModel.",
+            "items": {
+              "$ref": "#/components/schemas/UserSummary"
+            }
+          },
+          "_links": {
+            "$ref": "#/components/schemas/PagingLinks",
+            "description": "Contains the hyperlinks to the previous and next pages of results."
+          }
+        }
+      },
+      "UsersRepresentation": {
+        "type": "object",
+        "title": "Users (prefer return=representation)",
+        "description": "List of users in full representation.",
+        "properties": {
+          "Users": {
+            "type": "array",
+            "description": "List of users who have ever been connected to the iModel.",
+            "items": {
+              "$ref": "#/components/schemas/User"
+            }
+          },
+          "_links": {
+            "$ref": "#/components/schemas/PagingLinks",
+            "description": "Contains the hyperlinks to the previous and next pages of results."
+          }
+        }
+      },
+      "UserStatistics": {
+        "type": "object",
+        "title": "User Statistics",
+        "description": "Statistics about the usage of an iModel from the user.",
+        "properties": {
+          "pushedChangesetCount": {
+            "type": "integer",
+            "format": "int32",
+            "description": "Number of changesets pushed by the user."
+          },
+          "lastChangesetPushDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time",
+            "description": "Universal datetime value of the last time a changeset was pushed to the iModel by the user."
+          },
+          "createdVersionsCount": {
+            "type": "integer",
+            "format": "int32",
+            "description": "Number of named versions created by the user."
+          },
+          "lastAccesstime": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time",
+            "description": "Universal datetime value of the last time the iModel was accessed by the user."
+          }
+        }
+      },
+      "Lock": {
+        "type": "object",
+        "title": "Lock",
+        "description": "Representation of a Lock.",
+        "properties": {
+          "briefcaseId": {
+            "type": "integer",
+            "format": "int32",
+            "description": "Briefcase Id."
+          },
+          "lockedObjects": {
+            "type": "array",
+            "description": "An array of locked objects.",
+            "items": {
+              "$ref": "#/components/schemas/LockedObjects"
+            }
+          }
+        }
+      },
+      "LockResponse": {
+        "type": "object",
+        "title": "Lock Response",
+        "description": "Container for Lock object.",
+        "properties": {
+          "lock": {
+            "$ref": "#/components/schemas/Lock",
+            "description": "Lock entity."
+          }
+        }
+      },
+      "LocksResponse": {
+        "type": "object",
+        "title": "Locks Response",
+        "description": "List of Locks.",
+        "properties": {
+          "locks": {
+            "type": "array",
+            "description": "List of locks.",
+            "items": {
+              "$ref": "#/components/schemas/Lock"
+            }
+          },
+          "_links": {
+            "$ref": "#/components/schemas/PagingLinks",
+            "description": "Contains the hyperlinks to the previous and next pages of results."
+          }
+        }
+      },
+      "UpdateLocks": {
+        "type": "object",
+        "title": "Locks (update)",
+        "description": "Properties of locks to be updated.",
+        "properties": {
+          "briefcaseId": {
+            "type": "integer",
+            "format": "int32",
+            "description": "Briefcase Id for which to update locks."
+          },
+          "changesetId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Changeset Id. Meant to identify the latest Changeset in which the locked object was updated. If this value points to an older Changeset than the value saved in the server acquiring locks will fail."
+          },
+          "lockedObjects": {
+            "type": "array",
+            "description": "An array of locked objects.",
+            "items": {
+              "$ref": "#/components/schemas/LockedObjects"
+            }
+          }
+        }
+      },
+      "LockedObjects": {
+        "type": "object",
+        "title": "Locked Objects",
+        "description": "Contains a list of locked object ids and their lock level.",
+        "properties": {
+          "lockLevel": {
+            "type": "string",
+            "description": "Indicates the lock level. Possible values: 'none' - used for releasing already acquired locks, 'shared' - multiple Briefcases can acquire a shared lock on the same object, 'exclusive' - only one Briefcase can acquire an exclusive lock on a given object.",
+            "enum": [
+              "none",
+              "shared",
+              "exclusive"
+            ]
+          },
+          "objectIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of locked object ids. Allowed values are hexadecimal strings with '0x' prefix."
+          }
+        }
+      },
+      "ShareCreate": {
+        "type": "object",
+        "title": "Share (create)",
+        "description": "Properties of the Share to be created.",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the Share."
+          },
+          "expiresAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "A universal datetime value specifying until when the Share will be valid. It is recommended to use ISO 8601 format specification e.g. 2022-10-01T15:35:35.7777777Z. Cannot be set further into the future than 6 months."
+          },
+          "permission": {
+            "type": "string",
+            "description": "Specifies what [permission](https://developer.bentley.com/apis/imodels/operations/get-imodel-user-permissions) will be available when accessing iModel via the share key. Possible values: `imodels_webview`, `imodels_read`.",
+            "enum": [
+              "imodels_webview",
+              "imodels_read"
+            ]
+          }
+        }
+      },
+      "CreatedShareResponse": {
+        "type": "object",
+        "title": "Created Share Response",
+        "description": "Container for Share object.",
+        "properties": {
+          "share": {
+            "$ref": "#/components/schemas/CreatedShare",
+            "description": "Share properties."
+          }
+        }
+      },
+      "CreatedShare": {
+        "type": "object",
+        "title": "Representation of the Share object that includes shareKey property.",
+        "description": "Full representation of the Share.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Id of the Share"
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display name of the Share. Corresponds to Name property."
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the share."
+          },
+          "expiresAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "A universal datetime value specifying until when the Share will be valid."
+          },
+          "shareKey": {
+            "type": "string",
+            "description": "A key that can be used to access the iModel that owns this instance of the Share."
+          },
+          "permission": {
+            "type": "string",
+            "description": "Specifies what [permission](https://developer.bentley.com/apis/imodels/operations/get-imodel-user-permissions) will be available when accessing iModel via the share key. Possible values: `imodels_webview`, `imodels_read`.",
+            "enum": [
+              "imodels_webview",
+              "imodels_read"
+            ]
+          }
+        }
+      },
+      "ShareUpdate": {
+        "type": "object",
+        "title": "Share (update)",
+        "description": "Properties of the Share to be updated.",
+        "properties": {
+          "expiresAt": {
+            "type": "string",
+            "description": "A universal datetime value specifying until when the Share will be valid. It is recommended to use ISO 8601 format specification e.g. 2022-10-01T15:35:35.7777777Z. Cannot be set further into the future than 6 months."
+          }
+        }
+      },
+      "SharesResponse": {
+        "type": "object",
+        "title": "Shares Response",
+        "description": "List of Shares.",
+        "properties": {
+          "shares": {
+            "type": "array",
+            "description": "List of Shares.",
+            "items": {
+              "$ref": "#/components/schemas/Share"
+            },
+            "_links": {
+              "$ref": "#/components/schemas/PagingLinks",
+              "description": "Contains the hyperlinks to the previous and next pages of results."
+            }
+          }
+        }
+      },
+      "ShareResponse": {
+        "type": "object",
+        "title": "Share Response",
+        "description": "Container for Share object.",
+        "properties": {
+          "share": {
+            "$ref": "#/components/schemas/Share",
+            "description": "Share properties."
+          }
+        }
+      },
+      "Share": {
+        "type": "object",
+        "title": "Share",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Id of the Share"
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display name of the Share. Corresponds to Name property."
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the Share."
+          },
+          "expiresAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "A universal datetime value specifying until when the Share will be valid."
+          },
+          "permission": {
+            "type": "string",
+            "description": "Specifies what [permission](https://developer.bentley.com/apis/imodels/operations/get-imodel-user-permissions) will be available when accessing iModel via the share key. Possible values: `imodels_webview`, `imodels_read`.",
+            "enum": [
+              "imodels_webview",
+              "imodels_read"
+            ]
+          }
+        }
+      },
+      "image": {
+        "type": "string",
+        "format": "binary",
+        "description": "The binary image file"
+      },
+      "EntityLinks": {
+        "type": "object",
+        "title": "Entity Links",
+        "description": "Hyperlinks to related data which complements this entity.",
+        "properties": {
+          "creator": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Information about the creator of the entity."
+          }
+        }
+      },
+      "NamedVersionLinks": {
+        "type": "object",
+        "title": "Named Version Links",
+        "description": "Hyperlinks to Named Version related data.",
+        "properties": {
+          "creator": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Information about the creator of the Named Version."
+          },
+          "changeset": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Changeset for which the Named Version was created. If this is null then Named Version was created for a baseline iModel."
+          }
+        }
+      },
+      "iModelLinks": {
+        "type": "object",
+        "title": "iModel Links",
+        "description": "Hyperlinks to related data which complements this entity.",
+        "properties": {
+          "creator": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Information about the creator of the entity."
+          },
+          "changesets": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Link to retrieve Changesets of the iModel."
+          },
+          "namedVersions": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Link to retrieve Named Versions of the iModel."
+          }
+        }
+      },
+      "CreatediModelLinks": {
+        "type": "object",
+        "title": "Created iModel Links",
+        "description": "Hyperlinks to related data which complements this entity.",
+        "properties": {
+          "creator": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Information about the creator of the entity."
+          },
+          "changesets": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Link to retrieve Changesets of the iModel."
+          },
+          "namedVersions": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Link to retrieve Named Versions of the iModel."
+          },
+          "upload": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Hyperlink to upload Baseline File to Azure Blob storage."
+          },
+          "complete": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Hyperlink to confirm that Baseline File was uploaded. See Complete Baseline File upload operation."
+          }
+        }
+      },
+      "BaselineFileLinks": {
+        "type": "object",
+        "title": "Baseline File Links",
+        "description": "Hyperlinks to Briefcase related data.",
+        "properties": {
+          "creator": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Information about the creator of the Baseline File."
+          },
+          "download": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Link to download Baseline File from Azure Blob storage. Set only if the user has at least `imodels_read` permission, otherwise it is always set to null."
+          }
+        }
+      },
+      "BriefcaseLinks": {
+        "type": "object",
+        "title": "Briefcase Links",
+        "description": "Hyperlinks to Briefcase related data.",
+        "properties": {
+          "owner": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Information about the owner of the Briefcase."
+          }
+        }
+      },
+      "CheckpointLinks": {
+        "type": "object",
+        "title": "Checkpoint Links",
+        "description": "Hyperlinks to Checkpoint related data.",
+        "properties": {
+          "download": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Link to download Checkpoint File from Azure Blob storage."
+          }
+        }
+      },
+      "ChangesetLinks": {
+        "type": "object",
+        "title": "Changeset Links",
+        "description": "Hyperlinks to Changeset related data.",
+        "properties": {
+          "creator": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Information about the creator of the Changeset."
+          },
+          "namedVersion": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Named Version which was created for Changeset. If this is null then Changeset does not have a Named Version created for it."
+          },
+          "self": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Self hyperlink to get the details of the Changeset."
+          },
+          "download": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Hyperlink to download Changeset file from Azure Blob storage. Set only if the user has at least `imodels_read` permission, otherwise it is always set to null."
+          },
+          "currentOrPrecedingCheckpoint": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Hyperlink to get the latest successfully generated checkpoint where applied changeset index is lower or equal to this changeset index."
+          }
+        }
+      },
+      "CreatedChangesetLinks": {
+        "type": "object",
+        "title": "Created Changeset Links",
+        "description": "Hyperlinks to Changeset related data.",
+        "properties": {
+          "creator": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Information about the creator of the Changeset."
+          },
+          "namedVersion": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Named Version which was created for Changeset. If this is null then Changeset does not have a Named Version created for it."
+          },
+          "self": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Self hyperlink to get the details of the Changeset."
+          },
+          "upload": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Hyperlink to upload Changeset file to Azure Blob storage."
+          },
+          "complete": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Hyperlink to confirm that Changeset file was uploaded and complete pushing a Changeset. See Update iModel Changeset operation."
+          }
+        }
+      },
+      "ChangesetLinksSummary": {
+        "type": "object",
+        "title": "Changeset Links (summary)",
+        "description": "Hyperlinks to Changeset related data.",
+        "properties": {
+          "creator": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Information about the creator of the Changeset."
+          },
+          "self": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Self hyperlink to get the details of the Changeset."
+          }
+        }
+      },
+      "UserLinks": {
+        "type": "object",
+        "title": "User Links",
+        "description": "Hyperlinks to User related data.",
+        "properties": {
+          "self": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Self hyperlink to get the details of the Changeset."
+          }
+        }
+      },
+      "Link": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "description": "Hyperlink container.",
+        "properties": {
+          "href": {
+            "type": "string",
+            "description": "Hyperlink to the specific entity."
+          }
+        }
+      },
+      "Extent": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "description": "A rectangular area on the Earth. A rectangular area is defined by two latitudes and two longitudes that represent the four sides of a rectangular area on the Earth.",
+        "properties": {
+          "southWest": {
+            "$ref": "#/components/schemas/Point",
+            "description": "South Latitude, West Longitude."
+          },
+          "northEast": {
+            "$ref": "#/components/schemas/Point",
+            "description": "North Latitude, East Longitude."
+          }
+        },
+        "required": [
+          "southWest",
+          "northEast"
+        ]
+      },
+      "Point": {
+        "type": "object",
+        "description": "A point on the Earth specified by a latitude and longitude.",
+        "properties": {
+          "latitude": {
+            "type": "number",
+            "format": "double",
+            "minimum": -90,
+            "maximum": 90,
+            "description": "Latitude. Latitude ranges between -90 and 90 degrees, inclusive."
+          },
+          "longitude": {
+            "type": "number",
+            "format": "double",
+            "minimum": -180,
+            "maximum": 180,
+            "description": "Longitude. Longitude ranges between -180 and 180 degrees, inclusive."
+          }
+        },
+        "required": [
+          "longitude",
+          "latitude"
+        ]
+      },
+      "PagingLinks": {
+        "type": "object",
+        "title": "Paging Links",
+        "description": "URLs for redoing the current request, getting to the previous or next page of results, if applicable.",
+        "properties": {
+          "self": {
+            "description": "URL for redoing the current request.",
+            "$ref": "#/components/schemas/Link"
+          },
+          "prev": {
+            "description": "URL for getting the previous page of results.",
+            "$ref": "#/components/schemas/Link"
+          }
+        },
+        "next": {
+          "description": "URL for getting the next page of results.",
+          "$ref": "#/components/schemas/Link"
+        }
+      },
+      "Application": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "description": "Information about the client application that is related to an entity.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Id of the application."
+          },
+          "name": {
+            "type": "string",
+            "description": "Application name."
+          }
+        }
+      },
+      "SynchronizationInfo": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "description": "Information about synchronization that is related to a Changeset. This information is set by applications that perform iModel synchronization.",
+        "properties": {
+          "taskId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Id of the synchronization task."
+          },
+          "changedFiles": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string"
+            },
+            "description": "List of source file names that contained changes which were synchronized to this Changeset."
+          }
+        }
+      },
+      "SynchronizationInfoCreate": {
+        "title": "SynchronizationInfo (create)",
+        "type": [
+          "object",
+          "null"
+        ],
+        "description": "Information about synchronization that is related to a Changeset. This information is set by applications that perform iModel synchronization.",
+        "properties": {
+          "taskId": {
+            "type": [
+              "string"
+            ],
+            "description": "Id of the synchronization task."
+          },
+          "changedFiles": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string"
+            },
+            "description": "List of source file names that contained changes which were synchronized to this Changeset."
+          }
+        }
+      },
+      "Permissions": {
+        "type": "object",
+        "description": "List of permission user has on a given iModel.",
+        "properties": {
+          "permissions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Array of permissions user has on an iModel."
+          }
+        }
+      },
+      "UpdateRolePermissions": {
+        "type": "object",
+        "title": "Role permissions (update)",
+        "description": "Properties of role permissions to be updated.",
+        "properties": {
+          "rolePermissions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RolePermissions"
+            },
+            "description": "An array of role permissions."
+          }
+        }
+      },
+      "RolePermissions": {
+        "type": "object",
+        "title": "Role permissions",
+        "description": "Contains a list of role ids and their individual iModels permissions.",
+        "properties": {
+          "roleId": {
+            "type": "string",
+            "description": "Id of the Role."
+          },
+          "permissions": {
+            "type": "array",
+            "description": "Array of permissions user has on an iModel.",
+            "items": {
+              "type": "string",
+              "enum": [
+                "imodels_webview",
+                "imodels_read",
+                "imodels_write",
+                "imodels_manage"
+              ]
+            }
+          }
+        }
+      },
+      "RolePermissionsResponse": {
+        "type": "object",
+        "title": "Role Permissions Response",
+        "description": "List of Role permissions.",
+        "properties": {
+          "rolePermissions": {
+            "type": "array",
+            "description": "List of Role permissions.",
+            "items": {
+              "$ref": "#/components/schemas/RolePermissions"
+            }
+          }
+        }
+      },
+      "LocksErrorResponse": {
+        "type": "object",
+        "title": "Locks Error Response",
+        "description": "Returned in some specific cases from Locks request and contains additional information about the object ids that caused the error.",
+        "properties": {
+          "error": {
+            "description": "Error information.",
+            "$ref": "#/components/schemas/LocksError"
+          }
+        },
+        "required": [
+          "error"
+        ]
+      },
+      "ConflictingLocksErrorResponse": {
+        "type": "object",
+        "title": "Conflicting Locks Error Response",
+        "description": "Returned when acquiring Locks fails due to conflicts and contains additional information about the conflicting Locks.",
+        "properties": {
+          "error": {
+            "description": "Error information.",
+            "$ref": "#/components/schemas/ConflictingLocksError"
+          }
+        },
+        "required": [
+          "error"
+        ]
+      },
+      "LocksError": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Error"
+          }
+        ],
+        "properties": {
+          "objectIds": {
+            "type": "array",
+            "description": "Contains object ids that are causing the error.",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "ConflictingLocksError": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Error"
+          }
+        ],
+        "properties": {
+          "conflictingLocks": {
+            "type": "array",
+            "description": "Contains information about conflicting locks.",
+            "items": {
+              "$ref": "#/components/schemas/ConflictingLock"
+            }
+          }
+        }
+      },
+      "ConflictingLock": {
+        "type": "object",
+        "title": "Conflicting Lock",
+        "description": "Contains information about a conflicting lock.",
+        "properties": {
+          "objectId": {
+            "type": "string",
+            "description": "Object id that caused the conflict."
+          },
+          "lockLevel": {
+            "type": "string",
+            "description": "The level of conflicting lock. Possible values are 'shared', 'exclusive'.",
+            "enum": [
+              "shared",
+              "exclusive"
+            ]
+          },
+          "briefcaseIds": {
+            "type": "array",
+            "description": "An array of briefcase ids that own this lock.",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "required": [
+          "objectId",
+          "lockLevel",
+          "briefcaseIds"
+        ]
+      },
+      "CloneiModel": {
+        "type": "object",
+        "title": "Clone iModel Request",
+        "description": "Information that should be provided to start iModel cloning.",
+        "properties": {
+          "iTwinId": {
+            "type": "string",
+            "description": "Id of the iTwin in which the new iModel will be created."
+          },
+          "changesetId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Id of the latest source iModel Changeset that should be copied to the target iModel. Changeset can also be specified using an index, see `changesetIndex` property. If neither `changesetId` nor `changesetIndex` are provided, all existing source iModel Changesets are copied to the target iModel. If `\"changesetId\": \"\"` is specified, no Changesets are copied to the target iModel, only original [iModel Baseline](https://developer.bentley.com/apis/imodels-v2/operations/get-imodel-baseline-file-details/) is copied."
+          },
+          "changesetIndex": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "format": "int64",
+            "description": "Index of the latest source iModel Changeset that should be copied to the target iModel. Changeset can also be specified using an id, see `changesetId` property. If neither `changesetId` nor `changesetIndex` are provided, all existing source iModel Changesets are copied to the target iModel. If `\"changesetIndex\": 0` is specified, no Changesets are copied to the target iModel, only original [iModel Baseline](https://developer.bentley.com/apis/imodels-v2/operations/get-imodel-baseline-file-details/) is copied. Valid `changesetIndex` values are non-negative integers."
+          },
+          "name": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Name of the new iModel that will be created. If `name` is not provided, original iModel name will be used. iModel name must be unique within the iTwin. Valid `name` values are non-empty strings that are not longer than 255 characters."
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Description of the new iModel that will be created. If `description` is not provided, original iModel description will be used. Valid `description` values are non-empty strings that are not longer than 255 characters."
+          }
+        },
+        "required": [
+          "iTwinId"
+        ]
+      },
+      "ForkiModel": {
+        "type": "object",
+        "title": "Fork iModel Request",
+        "description": "Information that should be provided to start iModel Fork creation.",
+        "properties": {
+          "iTwinId": {
+            "type": "string",
+            "description": "Id of the iTwin in which the new iModel will be created."
+          },
+          "changesetId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Id of the latest source iModel Changeset that should be copied to the iModel Fork. Changeset can also be specified using an index, see `changesetIndex` property. If neither `changesetId` nor `changesetIndex` are provided, all existing source iModel Changesets are copied to the iModel Fork. If `\"changesetId\": \"\"` is specified, no Changesets are copied to the iModel Fork, only source [iModel Baseline](https://developer.bentley.com/apis/imodels-v2/operations/get-imodel-baseline-file-details/) is copied."
+          },
+          "changesetIndex": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "format": "int64",
+            "description": "Index of the latest source iModel Changeset that should be copied to the iModel Fork. Changeset can also be specified using an id, see `changesetId` property. If neither `changesetId` nor `changesetIndex` are provided, all existing source iModel Changesets are copied to the iModel Fork. If `\"changesetIndex\": 0` is specified, no Changesets are copied to the iModel Fork, only source [iModel Baseline](https://developer.bentley.com/apis/imodels-v2/operations/get-imodel-baseline-file-details/) is copied. Valid `changesetIndex` values are non-negative integers."
+          },
+          "name": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Name of the iModel that will be created. If `name` is not provided, source iModel name will be used. iModel name must be unique within the iTwin. Valid `name` values are non-empty strings that are not longer than 255 characters."
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Description of the iModel that will be created. If `description` is not provided, source iModel description will be used. Valid `description` values are non-empty strings that are not longer than 255 characters."
+          },
+          "preserveHistory": {
+            "type": [
+              "boolean",
+              "null"
+            ],
+            "description": "Option to control how Changesets are copied from the source iModel to the iModel Fork. If set to `true`, Changesets will be copied individually and the history will be preserved. If set to `false`, Changesets will be squashed and applied to the Baseline resulting in an iModel Fork without Changeset history. The default value is `false`."
+          }
+        },
+        "required": [
+          "iTwinId"
+        ]
+      },
+      "CreateiModelOperationResponse": {
+        "type": "object",
+        "title": "Create iModel Operation Response",
+        "description": "Container for Create iModel Operation object.",
+        "properties": {
+          "iModel": {
+            "$ref": "#/components/schemas/CreateiModelOperation",
+            "description": "Create iModel Operation."
+          }
+        }
+      },
+      "CreateiModelOperation": {
+        "type": "object",
+        "title": "Create iModel operation",
+        "description": "Information about iModel creation process.",
+        "properties": {
+          "state": {
+            "type": "string",
+            "description": "Indicates the current state of the iModel creation process. 'successful' - iModel creation process completed successfully. 'waitingForFile' - iModel is being created from a Baseline File and the file upload to file storage has not been completed yet. `scheduled` - iModel creation process is scheduled or in progress. This means that the iModel was created using one of the following methods that require background processing: [creating an iModel from Baseline File](https://developer.bentley.com/apis/imodels-v2/operations/create-imodel/#createanimodelusingabaselinefile), [cloning an iModel](https://developer.bentley.com/apis/imodels-v2/operations/clone-imodel/), [creating an iModel from template](https://developer.bentley.com/apis/imodels-v2/operations/create-imodel/#createanimodelfromanexistingimodel). `failed` - iModel creation process failed.",
+            "enum": [
+              "successful",
+              "waitingForFile",
+              "scheduled",
+              "failed"
+            ]
+          },
+          "clonedFrom": {
+            "$ref": "#/components/schemas/ClonedFrom",
+            "description": "Information about the source iModel of an iModel clone. If the iModel is not created using [Clone iModel](https://developer.bentley.com/apis/imodels-v2/operations/clone-imodel/) operation, the value of this property will be `null`."
+          },
+          "forkedFrom": {
+            "$ref": "#/components/schemas/ForkedFrom",
+            "description": "Information about the source iModel of an iModel Fork. If the iModel is not created using [Fork iModel](https://developer.bentley.com/apis/imodels-v2/operations/clone-fork/) operation, the value of this property will be `null`."
+          }
+        }
+      },
+      "ClonedFrom": {
+        "type": "object",
+        "title": "Cloned From",
+        "description": "Information about the source iModel of an iModel clone. This information will only be returned for iModels created using [Clone iModel](https://developer.bentley.com/apis/imodels-v2/operations/clone-imodel/) operation.",
+        "properties": {
+          "iModelId": {
+            "type": "string",
+            "description": "Id of the source iModel."
+          },
+          "changesetId": {
+            "type": "string",
+            "description": "Id of the latest source iModel Changeset which was copied to this iModel. This corresponds to the Changeset specified in `changesetId` or `changesetIndex` properties when [cloning an iModel](https://developer.bentley.com/apis/imodels-v2/operations/clone-imodel/#request-body-cloneimodel). If `changesetId` is an empty string it means that no Changesets were copied from the source iModel to this one, only iModel Baseline."
+          }
+        },
+        "required": [
+          "iModelId",
+          "changesetId"
+        ]
+      },
+      "ForkedFrom": {
+        "type": "object",
+        "title": "Forked From",
+        "description": "Information about the source iModel of an iModel Fork. This information will only be returned for iModels created using [Fork iModel](https://developer.bentley.com/apis/imodels-v2/operations/fork-imodel/) operation.",
+        "properties": {
+          "iModelId": {
+            "type": "string",
+            "description": "Id of the source iModel."
+          },
+          "changesetId": {
+            "type": "string",
+            "description": "Id of the latest source iModel Changeset which was copied to this iModel. This corresponds to the Changeset specified in `changesetId` or `changesetIndex` properties when [forking an iModel](https://developer.bentley.com/apis/imodels-v2/operations/fork-imodel/#request-body-forkimodel). If `changesetId` is an empty string it means that no Changesets were copied from the source iModel to this one, only iModel Baseline."
+          },
+          "relationshipId": {
+            "type": "string",
+            "description": "Id of the Relationship entity that links source and Fork iModels."
+          }
+        },
+        "required": [
+          "iModelId",
+          "changesetId",
+          "relationshipId"
+        ]
+      },
+      "ChangesetGroupCreate": {
+        "type": "object",
+        "title": "Changeset Group (create)",
+        "description": "Properties of the Changeset Group to be created.",
+        "properties": {
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Description of the new Changeset Group that will be created. Valid `description` values are strings that are not longer than 255 characters."
+          }
+        }
+      },
+      "ChangesetGroupResponse": {
+        "type": "object",
+        "title": "Changeset Group Response",
+        "description": "Container for Changeset Group object.",
+        "properties": {
+          "changesetGroup": {
+            "$ref": "#/components/schemas/ChangesetGroup",
+            "description": "Changeset Group properties."
+          }
+        }
+      },
+      "ChangesetGroupListResponse": {
+        "type": "object",
+        "title": "Changeset Group List Response",
+        "description": "List of Changeset Group entries.",
+        "properties": {
+          "changesetGroups": {
+            "type": "array",
+            "description": "iModel Changeset Groups.",
+            "items": {
+              "$ref": "#/components/schemas/ChangesetGroup"
+            }
+          },
+          "_links": {
+            "$ref": "#/components/schemas/PagingLinks",
+            "description": "Contains the hyperlinks to the previous and next pages of results."
+          }
+        }
+      },
+      "ChangesetGroup": {
+        "type": "object",
+        "title": "Changeset Group",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Id of the Changeset Group."
+          },
+          "state": {
+            "type": "string",
+            "description": "Indicates the state of the Changeset Group. 'inProgress' - indicates that Changeset Group is in progress and Changesets can be pushed to it. 'completed' - indicates that Changeset Group is closed, Changesets cannot be pushed to it anymore. 'timedOut' - indicates that Changeset Group was not completed within the specified timeout period so it was closed by the service, Changesets cannot be pushed to it anymore. `forciblyClosed` - indicates that Changeset group was forcibly closed before cloning to the target iModel.",
+            "enum": [
+              "inProgress",
+              "completed",
+              "timedOut",
+              "forciblyClosed"
+            ]
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Description of the Changeset Group."
+          },
+          "creatorId": {
+            "type": "string",
+            "description": "Id of the user who created the Changeset Group."
+          },
+          "createdDateTime": {
+            "type": "string",
+            "description": "Date when the Changeset Group was created."
+          },
+          "_links": {
+            "$ref": "#/components/schemas/ChangesetGroupLinks",
+            "description": "Contains the hyperlinks to the related data of the Changeset Group."
+          }
+        }
+      },
+      "ChangesetGroupLinks": {
+        "type": "object",
+        "title": "Changeset Group Links",
+        "description": "Hyperlinks to Changeset Group related data.",
+        "properties": {
+          "creator": {
+            "$ref": "#/components/schemas/Link",
+            "description": "Information about the creator of the Changeset Group."
+          }
+        }
+      },
+      "ChangesetGroupUpdate": {
+        "type": "object",
+        "title": "Changeset Group (update)",
+        "description": "Properties of the Changeset Group to be updated.",
+        "properties": {
+          "state": {
+            "type": "string",
+            "description": "Indicates the state of the Changeset Group. Should be set to 'completed'.",
+            "enum": [
+              "inProgress",
+              "completed",
+              "timedOut",
+              "forciblyClosed"
+            ]
+          }
+        },
+        "required": [
+          "state"
+        ]
+      },
+      "DetailedError": {
+        "type": "object",
+        "description": "Contains error information and an array of more specific errors.",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "One of a server-defined set of error codes."
+          },
+          "message": {
+            "type": "string",
+            "description": "A human-readable representation of the error."
+          },
+          "target": {
+            "type": "string",
+            "description": "The target of the error.",
+            "nullable": true
+          },
+          "details": {
+            "type": "array",
+            "description": "Optional array of more specific errors.",
+            "items": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "details"
+        ]
+      },
+      "DetailedErrorResponse": {
+        "type": "object",
+        "title": "Detailed Error Response",
+        "description": "Gives details for an error that occurred while handling the request. Note that clients MUST NOT assume that every failed request will produce an object of this schema, or that all of the properties in the response will be non-null, as the error may have prevented this response from being constructed.",
+        "properties": {
+          "error": {
+            "description": "Error Detailed information.",
+            "$ref": "#/components/schemas/DetailedError"
+          }
+        },
+        "required": [
+          "error"
+        ]
+      },
+      "Error": {
+        "type": "object",
+        "description": "Contains error information.",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "One of a server-defined set of error codes."
+          },
+          "message": {
+            "type": "string",
+            "description": "A human-readable representation of the error."
+          },
+          "target": {
+            "type": "string",
+            "description": "The target of the error.",
+            "nullable": true
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ]
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "title": "Error Response",
+        "description": "Gives details for an error that occurred while handling the request. Note that clients MUST NOT assume that every failed request will produce an object of this schema, or that all of the properties in the response will be non-null, as the error may have prevented this response from being constructed.",
+        "properties": {
+          "error": {
+            "description": "Error information.",
+            "$ref": "#/components/schemas/Error"
+          }
+        },
+        "required": [
+          "error"
+        ]
+      }
+    }
+  }
+}

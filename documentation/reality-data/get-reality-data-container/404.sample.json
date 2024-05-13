@@ -1,0 +1,6 @@
+{
+  "error": {
+    "code": "IdNotFound",
+    "message": "Requested reality data id is not available."
+  }
+}

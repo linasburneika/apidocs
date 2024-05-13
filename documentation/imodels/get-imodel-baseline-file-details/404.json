@@ -1,0 +1,19 @@
+{
+    "statusCode": 404,
+    "description": "Specified iModel was not found or it does not have an associated Baseline File entity.",
+    "headers": [],
+    "representations": [
+        {
+            "contentType": "application/json;iModelNotFound",
+            "sample": "iModelNotFound",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        },
+        {
+            "contentType": "application/json;BaselineFileNotFound",
+            "sample": "BaselineFileNotFound",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        }
+    ]
+}

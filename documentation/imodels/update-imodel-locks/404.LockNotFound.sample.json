@@ -1,0 +1,7 @@
+{
+    "error": {
+        "code": "LockNotFound",
+        "message": "Requested Lock(s) is not available.",
+        "objectIds": ["0x1", "0x2", "0x3"]
+    }
+}

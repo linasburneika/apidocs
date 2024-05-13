@@ -1,0 +1,6 @@
+{
+    "error": {
+        "code": "RequestTooLarge",
+        "message": "Provided 'objectIds' count exceeds the limit of 1000."
+    }
+}

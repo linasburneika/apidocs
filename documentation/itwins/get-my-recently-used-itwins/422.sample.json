@@ -1,0 +1,33 @@
+{
+  "error": {
+    "code": "InvalidiTwinsRequest",
+    "message": "Cannot query iTwins.",
+    "details": [
+      {
+        "code": "InvalidValue",
+        "message": "The $top query option must be a positive integer that does not exceed 1000.",
+        "target": "$top"
+      },
+      {
+        "code": "InvalidValue",
+        "message": "The $skip query option must be a non-negative integer.",
+        "target": "$skip"
+      },
+      {
+        "code": "InvalidValue",
+        "message": "A valid iTwin SubClass was not specified in the query.",
+        "target": "subClass"
+      },
+      {
+        "code": "InvalidValue",
+        "message": "Status value is incorrect. Valid values are Active, Inactive and Trial.",
+        "target": "status"
+      },
+	  {
+        "code": "InvalidParameter",
+        "message": "The includeInactive parameter should not be used at the same time as the status parameter.",
+        "target": "includeInactive"
+      }
+    ]
+  }
+}

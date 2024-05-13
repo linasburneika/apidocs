@@ -1,0 +1,10 @@
+{
+    "createOperation": {
+        "state": "scheduled",
+        "clonedFrom": {
+            "iModelId": "5e19bee0-3aea-4355-a9f0-c6df9989ee7d",
+            "changesetId": "13a61888798b687d41f7c748d7414b428766281f"
+        },
+        "forkedFrom": null
+    }
+}

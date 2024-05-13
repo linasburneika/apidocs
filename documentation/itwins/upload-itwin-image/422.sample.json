@@ -1,0 +1,23 @@
+{
+  "error": {
+    "code": "InvalidiTwinsRequest",
+    "message": "Cannot create iTwin Image.",
+    "details": [
+      {
+        "code": "ReadOnlyProperty",
+        "message": "Id is read only and cannot be modified.",
+        "target": "id"
+      },
+      {
+        "code": "InvalidRequestBody",
+        "message": "The iTwin Image is too big.  It cannot be greater than 5 MB.",
+        "target": "image"
+      },
+      {
+        "code": "InvalidValue",
+        "message": "The width or height dimensions of the image cannot be greater than 5 times the size of each other.",
+        "target": "image"
+      }
+    ]
+  }
+  }

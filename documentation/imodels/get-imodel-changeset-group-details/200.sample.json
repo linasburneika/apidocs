@@ -1,0 +1,14 @@
+{
+  "changesetGroup": {
+      "id": "67e7cb77-64da-4707-9a0a-7dc1ca601869",
+      "state": "inProgress",
+      "description": "MicroStation Connector run 2024-01-01",
+      "creatorId": "42101fba-847a-4f4e-85a8-a4bed89065e4",
+      "createdDateTime": "2024-02-01T08:44:48.3900000Z",
+      "_links": {
+          "creator": {
+              "href": "https://api.bentley.com/imodels/1b68e726-57e0-49b9-8080-7da530c443ce/users/42101fba-847a-4f4e-85a8-a4bed89065e4"
+          }
+      }
+  }
+}

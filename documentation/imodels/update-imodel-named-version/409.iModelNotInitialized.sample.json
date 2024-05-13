@@ -1,0 +1,6 @@
+{
+    "error": {
+        "code": "iModelNotInitialized",
+        "message": "iModel is not initialized."
+    }
+}

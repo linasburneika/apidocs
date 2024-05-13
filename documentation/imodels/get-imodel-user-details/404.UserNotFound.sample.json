@@ -1,0 +1,6 @@
+{
+    "error": {
+        "code": "UserNotFound",
+        "message": "Requested User is not available."
+    }
+}

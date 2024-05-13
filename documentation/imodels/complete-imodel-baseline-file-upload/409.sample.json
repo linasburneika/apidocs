@@ -1,0 +1,6 @@
+{
+    "error": {
+        "code": "DataConflict",
+        "message": "File size provided during iModel creation does not match actual file size."
+    }
+}

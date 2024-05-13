@@ -1,0 +1,38 @@
+{
+    "changeset": {
+        "id": "1f2e04b666edce395e37a795e2231e995cbf8349",
+        "displayName": "256",
+        "description": "Changeset 15",
+        "index": 0,
+        "parentId": "f7618612c572d7db8e3e6095d622d0d8aff22874",
+        "state": "waitingForFile",
+        "containingChanges": 0,
+        "fileSize": 109,
+        "briefcaseId": 2,
+        "groupId": "1a038d01-5b2d-44d9-b4ca-e8d21805983c",
+        "synchronizationInfo": {
+            "changedFiles": [
+                "File1.dgn",
+                "File2.dgn"
+            ],
+            "taskId": "5154ac23-d83f-4e82-b708-438fb6d51d4e"
+        },
+        "creatorId": null,
+        "pushDateTime": null,
+        "application": null,
+        "_links": {
+            "creator": null,
+            "namedVersion": null,
+            "currentOrPrecedingCheckpoint": null,
+            "self": {
+                "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/changesets/1f2e04b666edce395e37a795e2231e995cbf8349"
+            },
+            "upload": {
+                "href": "https://imodelhub.blob.core.windows.net/imodelhub-5e19bee0-3aea-4355-a9f0-c6df9989ee7d/1f2e04b666edce395e37a795e2231e995cbf8349.cs?sv=2019-07-07&sr=b&sig=IKzMBa%2Be3TjSebXj6rWmDHiG4FEoxtPA2vJUyTVZ%2B%2BI%3D&st=2021-07-30T09%3A02%3A10.1944006Z&se=2021-07-30T09%3A22%3A10.1944012Z&sp=rw"
+            },
+            "complete": {
+                "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/changesets/1f2e04b666edce395e37a795e2231e995cbf8349"
+            }
+        }
+    }
+}

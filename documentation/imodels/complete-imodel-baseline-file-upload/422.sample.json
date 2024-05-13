@@ -1,0 +1,12 @@
+{
+    "error": {
+        "code": "InvalidiModelsRequest",
+        "message": "Cannot complete Baseline File upload.",
+        "details": [
+            {
+                "code": "InvalidChange",
+                "message": "Baseline File upload is not in progress."
+            }
+        ]
+    }
+}

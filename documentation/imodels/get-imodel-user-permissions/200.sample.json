@@ -1,0 +1,8 @@
+{
+    "permissions": [
+        "imodels_webview",
+        "imodels_read",
+        "imodels_write",
+        "imodels_manage"
+    ]
+}

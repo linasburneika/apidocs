@@ -1,0 +1,28 @@
+{
+  "error": {
+    "code": "InvalidiTwinsRequest",
+    "message": "Cannot add iTwin Repository.",
+    "details": [
+      {
+        "code": "InvalidValue",
+        "message": "Class value is incorrect.",
+        "target": "class"
+      },
+      {
+        "code": "InvalidValue",
+        "message": "SubClass value is incorrect.",
+        "target": "subClass"
+      },
+      {
+        "code": "MissingRequiredProperty",
+        "message": "A required property is missing or empty.",
+        "target": "class"
+      },
+      {
+        "code": "MissingRequiredProperty",
+        "message": "A required property is missing or empty.",
+        "target": "uri"
+      }
+    ]
+  }
+}

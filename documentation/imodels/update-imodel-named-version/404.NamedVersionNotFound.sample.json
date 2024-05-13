@@ -1,0 +1,6 @@
+{
+    "error": {
+        "code": "NamedVersionNotFound",
+        "message": "Requested Named Version is not available."
+    }
+}

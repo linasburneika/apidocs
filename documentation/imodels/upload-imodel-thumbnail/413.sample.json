@@ -1,0 +1,6 @@
+{
+    "error": {
+        "code": "RequestTooLarge",
+        "message": "Request body is too large. Maximum allowed request body size is 5242880 bytes."
+    }
+}

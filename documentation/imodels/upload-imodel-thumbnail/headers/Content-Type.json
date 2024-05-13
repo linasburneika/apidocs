@@ -1,0 +1,10 @@
+{
+    "name": "Content-Type",
+    "description": "Indicates request body content type.",
+    "type": "string",
+    "required": true,
+    "values": [
+      "image/png",
+      "image/jpeg"
+    ]
+}

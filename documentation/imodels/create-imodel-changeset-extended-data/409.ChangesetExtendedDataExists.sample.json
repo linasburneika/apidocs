@@ -1,0 +1,6 @@
+{
+    "error": {
+        "code": "ChangesetExtendedDataExists",
+        "message": "Changeset Extended Data for specified Changeset exists within the iModel."
+    }
+}

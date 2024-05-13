@@ -1,0 +1,13 @@
+{
+  "statusCode": 404,
+  "description": "This response indicates that the association between the reality data and project was not found.",
+  "headers": [],
+  "representations": [
+    {
+      "contentType": "application/json",
+      "sample": "",
+      "schemaId": "schema",
+      "typeName": "error-response"    
+    }
+  ]
+}

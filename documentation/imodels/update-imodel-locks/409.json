@@ -1,0 +1,25 @@
+{
+    "statusCode": 409,
+    "description": "Locks are already owned by another briefcase and cannot be acquired, locks have been updated in a newer changeset or the iModel is not initialized.",
+    "headers": [],
+    "representations": [
+        {
+            "contentType": "application/json;ConflictWithAnotherUser",
+            "sample": "ConflictWithAnotherUser",
+            "schemaId": "v1-schema",
+            "typeName": "ConflictingLocksErrorResponse"
+        },
+        {
+            "contentType": "application/json;NewerChangesExist",
+            "sample": "NewerChangesExist",
+            "schemaId": "v1-schema",
+            "typeName": "LocksErrorResponse"
+        },
+        {
+            "contentType": "application/json;iModelNotInitialized",
+            "sample": "iModelNotInitialized",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        }
+    ]
+}

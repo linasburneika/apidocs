@@ -1,0 +1,6 @@
+{
+  "error": {
+    "code": "InvalidGetRealityDataContainerRequest",
+    "message": "Unknown error. Please ensure that the request is valid."
+  }
+}

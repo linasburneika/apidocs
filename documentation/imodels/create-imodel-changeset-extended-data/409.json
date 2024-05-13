@@ -1,0 +1,19 @@
+{
+    "statusCode": 409,
+    "description": "iModel is not initialized, a Changeset Extended Data already exists.",
+    "headers": [],
+    "representations": [
+        {
+            "contentType": "application/json;ChangesetExtendedDataExists",
+            "sample": "ChangesetExtendedDataExists",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        },
+        {
+            "contentType": "application/json;iModelNotInitialized",
+            "sample": "iModelNotInitialized",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        }
+    ]
+}

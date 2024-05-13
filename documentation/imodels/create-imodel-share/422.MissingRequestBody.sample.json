@@ -1,0 +1,6 @@
+{
+    "error": {
+        "code": "MissingRequestBody",
+        "message": "Request body was not provided."
+        }
+}

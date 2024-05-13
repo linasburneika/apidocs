@@ -1,0 +1,22 @@
+{
+    "error": {
+        "code": "InvalidiModelsRequest",
+        "message": "Cannot update Share.",
+        "details": [
+            {
+                "code": "InvalidValue",
+                "message": "Provided 'expiresAt' value is not valid. Expected a value of type 'string'.",
+                "target": "expiresAt"
+            },
+            {
+                "code": "MissingRequiredProperty",
+                "message": "Required property is missing.",
+                "target": "expiresAt"
+            },
+            {
+                "code": "InvalidRequestBody",
+                "message": "Failed to parse request body. Make sure it is a valid JSON."
+            }
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "briefcases": [
+        {
+            "id": "2",
+            "displayName": "#2 Device Name"
+        },
+        {
+            "id": "3",
+            "displayName": "#3 Device Name"
+        }
+    ],
+    "_links":
+    {
+        "self": {
+            "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/briefcases?$skip=0&$top=100"
+        },
+        "prev": {
+            "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/briefcases?$skip=0&$top=100"
+        },
+        "next": {
+            "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/briefcases?$skip=0&$top=100"
+        }
+    }
+}

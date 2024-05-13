@@ -1,0 +1,28 @@
+{
+  "iTwins": [
+    {
+      "id": "dc914a84-e0c9-40e2-9d14-faf5ed84147f",
+      "class": "Endeavor",
+      "subClass": "Project",
+      "type": "Construction Project",
+      "number": "00001-ds-3902795",
+      "displayName": "White River"
+    },
+    {
+      "id": "dd50fa65-ff23-4778-831b-c2caa5471a97",
+      "class": "Endeavor",
+      "subClass": "Project",
+      "type": "Construction Project",
+      "number": "f7sa7fas89d",
+      "displayName": "Battle Creek 3"
+    }
+  ],
+  "_links": {
+    "self": {
+        "href": "https://api.bentley.com/iTwins/?$skip=0&$top=10"
+    },
+    "next": {
+        "href": "https://api.bentley.com/iTwins/?$skip=10&$top=10"
+    }
+  }
+}

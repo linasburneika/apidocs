@@ -1,0 +1,6 @@
+{
+    "error": {
+        "code": "iTwinNotFound",
+        "message": "Requested iTwin is not available."
+    }
+}

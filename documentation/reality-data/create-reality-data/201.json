@@ -1,0 +1,13 @@
+{
+    "statusCode": 201,
+    "description": "Reality data successfully created",
+    "headers": [],
+    "representations": [
+      {
+        "contentType": "application/json",
+        "sample": "",
+        "schemaId": "schema",
+        "typeName": "reality-data-metadata-create-response"
+      }
+    ]
+  }

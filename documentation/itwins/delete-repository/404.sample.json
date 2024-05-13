@@ -1,0 +1,6 @@
+{
+  "error": {
+    "code": "iTwinRepositoryNotFound",
+    "message": "Requested iTwin Repository is not available."
+  }
+}

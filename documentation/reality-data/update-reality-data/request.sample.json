@@ -1,0 +1,28 @@
+{
+  "projectId": "d8414d06-560e-49da-81a5-f7204fa4457b",
+  "realityData": {
+    "displayName": "Name of the reality data to modify",
+    "classification": "Model",
+    "type": "3mx",
+    "description": "Description of the reality data",
+    "dataset": "Dataset",
+    "group": "GroupId",
+    "rootDocument": "Models/Scene/myModel.3mx",
+    "acquisition": {
+      "startDateTime": "2021-05-12T20:03:12Z",
+      "endDateTime": "2021-05-15T22:07:18Z",
+      "acquirer": "Data Acquisition Inc."
+    },
+    "extent": {
+      "southWest": {
+        "latitude": 40.0206,
+        "longitude": -75.6355
+      },
+      "northEast": {
+        "latitude": 40.0356,
+        "longitude": -75.6059
+      }
+    },
+    "authoring": false
+  }
+}

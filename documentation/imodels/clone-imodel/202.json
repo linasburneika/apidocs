@@ -1,0 +1,21 @@
+{
+  "statusCode": 202,
+  "description": "Accepted",
+  "headers": [
+    {
+      "name": "Location",
+      "description": "The resource location which is a URL to the new iModel.",
+      "type": "string",
+      "required": true,
+      "values": []
+    },
+    {
+      "name": "Create-iModel-Operation",
+      "description": "A URL which points to [Get Create iModel Operation details](https://developer.bentley.com/apis/imodels-v2/operations/get-create-imodel-operation-details/) endpoint for the new iModel.",
+      "type": "string",
+      "required": true,
+      "values": []
+    }
+  ],
+  "representations": []
+}

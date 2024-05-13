@@ -1,0 +1,37 @@
+{
+    "locks": [
+        {
+            "briefcaseId": 2,
+            "lockedObjects": [
+                {
+                    "lockLevel": "shared",
+                    "objectIds": ["0x1", "0x2", "0xab"]
+                },
+                {
+                    "lockLevel": "exclusive",
+                    "objectIds": ["0x3", "0x4", "0xac"]
+                }
+            ]
+        },
+        {
+            "briefcaseId": 3,
+            "lockedObjects": [
+                {
+                    "lockLevel": "shared",
+                    "objectIds": ["0x12", "0x21", "0xff"]
+                }
+            ]
+        }
+    ],
+    "_links": {
+        "self": {
+            "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/locks?$skip=0&$top=100"
+        },
+        "prev": {
+            "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/locks?$skip=0&$top=100"
+        },
+        "next": {
+            "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/locks?$skip=100&$top=100"
+        }
+    }
+}

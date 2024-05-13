@@ -1,0 +1,19 @@
+{
+    "iTwin": {
+        "id": "dc914a84-e0c9-40e2-9d14-faf5ed84147f",
+        "class": "Endeavor",
+        "subClass": "Project",
+        "type": "Construction Project",
+        "number": "00001-ds-3902795",
+        "displayName": "White River",        
+		"geographicLocation": "Exton, PA",
+        "dataCenterLocation": "East US",
+        "status": "Active",
+        "parentId": "8a04f48b-1b11-475f-9b61-3083bc69f28f",
+		"iTwinAccountId": "76c1102e-4f33-4dfa-ad93-bcd9ab717977",
+        "imageName": "small_f3324967-82db-4c04-aad2-60635d00e1f6.png",
+        "image": "https://crdeveussa01.blob.core.windows.net/context-thumbnails/small_f3324967-82db-4c04-aad2-60635d00e1f6.png?sv=2018-03-28&sr=b&sig=lcZwOExuEkdYg7KCXvrZyiVqTaRnl%2B%2F2m4ZJyj%2B5n6Y%3D&se=2023-07-07T00%3A00%3A00Z&sp=r",
+		"createdDateTime": "2016-01-18T21:03:00.3704659Z",
+        "createdBy": "66624686-8056-4af7-94ad-b1d3ef776f43"
+    }
+}

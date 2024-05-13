@@ -1,0 +1,24 @@
+{
+    "namedVersion": {
+        "id": "3020441b-e179-4334-a59a-4fb8deb93df1",
+        "displayName": "Wind farm design",
+        "changesetId": "1f2e04b666edce395e37a795e2231e995cbf8349",
+        "changesetIndex": 14,
+        "name": "Wind farm design",
+        "description": "Finalized wind farm design in Sun City",
+        "createdDateTime": "2020-10-21T06:42:57.6700000Z",
+        "state": "visible",
+        "application": {
+            "id": "itwin-designer-unique-id",
+            "name": "iTwin Designer"
+        },
+        "_links": {
+            "creator": {
+                "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/users/ea4dfb9f-7f66-4c6f-82c5-0efad1636a1f"
+            },
+            "changeset": {
+                "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/changesets/1f2e04b666edce395e37a795e2231e995cbf8349"
+            }
+        }
+    }
+}

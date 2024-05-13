@@ -1,0 +1,27 @@
+{
+    "error": {
+        "code": "InvalidiModelsRequest",
+        "message": "Cannot create Named Version.",
+        "details": [
+            {
+                "code": "InvalidValue",
+                "message": "Provided 'name' is not valid. The value exceeds allowed 255 characters.",
+                "target": "name"
+            },
+            {
+                "code": "InvalidHeaderValue",
+                "message": "'application/xml' is not supported 'content-type'. Supported media type is 'application/json'.",
+                "target": "content-type"
+            },
+            {
+                "code": "MissingRequiredProperty",
+                "message": "Required property is missing.",
+                "target": "name"
+            },
+            {
+                "code": "InvalidRequestBody",
+                "message": "Failed to parse request body. Make sure it is a valid JSON."
+            }
+        ]
+    }
+}

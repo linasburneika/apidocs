@@ -1,0 +1,13 @@
+{
+    "error": {
+        "code": "InvalidiModelsRequest",
+        "message": "Cannot get Thumbnail.",
+        "details": [
+            {
+                "code": "InvalidValue",
+                "message": "'invalidSize' is not a valid 'size'. Valid 'size' values are: 'small', 'large'.",
+                "target": "size"
+            }
+        ]
+    }
+}

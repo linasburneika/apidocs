@@ -1,0 +1,15 @@
+{
+    "id": "1f2e04b666edce395e37a795e2231e995cbf8349",
+    "description": "Changeset 15",
+    "parentId": "f7618612c572d7db8e3e6095d622d0d8aff22874",
+    "containingChanges": 0,
+    "fileSize": 109,
+    "briefcaseId": 2,
+    "groupId": "1a038d01-5b2d-44d9-b4ca-e8d21805983c",
+    "synchronizationInfo": {
+        "changedFiles": [
+            "File1.dgn"
+        ],
+        "taskId": "5154ac23-d83f-4e82-b708-438fb6d51d4e"
+    }
+}

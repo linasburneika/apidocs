@@ -1,0 +1,17 @@
+{
+    "error": {
+        "code": "InvalidiModelsRequest",
+        "message": "Cannot update Role permissions.",
+        "details": [
+            {
+                "code": "MissingRequiredProperty",
+                "message": "Required property is missing.",
+                "target": "rolePermissions"
+            },
+            {
+                "code": "InvalidRequestBody",
+                "message": "Failed to parse request body. Make sure it is a valid JSON."
+            }
+        ]
+    }
+}

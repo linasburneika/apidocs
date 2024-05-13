@@ -1,0 +1,15 @@
+{
+    "lock": {
+        "briefcaseId": 2,
+        "lockedObjects": [
+            {
+                "lockLevel": "shared",
+                "objectIds": ["0x1", "0x2", "0xab"]
+            },
+            {
+                "lockLevel": "exclusive",
+                "objectIds": ["0x3", "0x4", "0xac"]
+            }
+        ]
+    }
+}

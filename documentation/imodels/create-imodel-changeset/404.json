@@ -1,0 +1,19 @@
+{
+    "statusCode": 404,
+    "description": "Specified iModel or Briefcase was not found.",
+    "headers": [],
+    "representations": [
+        {
+            "contentType": "application/json;iModelNotFound",
+            "sample": "iModelNotFound",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        },
+        {
+            "contentType": "application/json;BriefcaseNotFound",
+            "sample": "BriefcaseNotFound",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "error": {
+        "code": "ChangesetGroupNotFound",
+        "message": "Requested Changeset Group is not available."
+    }
+}

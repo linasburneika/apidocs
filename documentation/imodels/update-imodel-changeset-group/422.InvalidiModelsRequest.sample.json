@@ -1,0 +1,22 @@
+{
+    "error": {
+        "code": "InvalidiModelsRequest",
+        "message": "Cannot update Changeset Group.",
+        "details": [
+            {
+                "code": "InvalidValue",
+                "message": "'abc' is not a valid 'state' value. Valid 'state' values are: 'completed'.",
+                "target": "state"
+            },
+            {
+                "code": "MissingRequiredProperty",
+                "message": "Required property is missing.",
+                "target": "state"
+            },
+            {
+                "code": "InvalidRequestBody",
+                "message": "Failed to parse request body. Make sure it is a valid JSON."
+            }
+        ]
+    }
+}

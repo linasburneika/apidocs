@@ -1,0 +1,12 @@
+{
+  "repositories": [{
+      "id": "5ebf5b78-a4e4-4bfe-8b1d-838f2c419259",
+      "class": "ProjectWise",
+      "uri": "https://developer.bentley.com"
+  }, {
+      "id": "6cbfd529-bb6d-4438-9209-09501f214502",
+      "class": "GeographicInformationSystem",
+      "subClass": "WebMapTileService",
+      "uri": "https://developer.bentley.com"
+  }]
+}

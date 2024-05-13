@@ -1,0 +1,13 @@
+{
+    "error": {
+        "code": "InvalidiModelsRequest",
+        "message": "Cannot get Named Versions.",
+        "details": [
+            {
+                "code": "InvalidValue",
+                "message": "'-1' is not a valid '$skip' value. '$skip' must be a non-negative integer.",
+                "target": "$skip"
+            }
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "statusCode": 200,
+    "description": "OK",
+    "headers": [],
+    "representations": [
+      {
+        "contentType": "application/json",
+        "sample": "",
+        "schemaId": "schema",
+        "typeName": "reality-data-projects-response"
+      }
+    ]
+  }

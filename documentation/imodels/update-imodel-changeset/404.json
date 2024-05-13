@@ -1,0 +1,31 @@
+{
+    "statusCode": 404,
+    "description": "Specified iModel, Changeset, Briefcase or file was not found. FileNotFound will be returned if the server cannot find the uploaded Changeset file.",
+    "headers": [],
+    "representations": [
+        {
+            "contentType": "application/json;iModelNotFound",
+            "sample": "iModelNotFound",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        },
+        {
+            "contentType": "application/json;ChangesetNotFound",
+            "sample": "ChangesetNotFound",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        },
+        {
+            "contentType": "application/json;FileNotFound",
+            "sample": "FileNotFound",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        },
+        {
+            "contentType": "application/json;BriefcaseNotFound",
+            "sample": "BriefcaseNotFound",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        }
+    ]
+}

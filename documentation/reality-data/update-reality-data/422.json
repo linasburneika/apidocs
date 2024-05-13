@@ -1,0 +1,19 @@
+{
+  "statusCode": 422,
+  "description": "Invalid request to update reality data",
+  "headers": [],
+  "representations": [
+    {
+      "contentType": "application/json;InvalidRealityDataRequest",
+      "sample": "InvalidRealityDataRequest",
+      "schemaId": "schema",
+      "typeName": "error-response"        
+    },
+    {
+      "contentType": "application/json;MissingRequestBody",
+      "sample": "MissingRequestBody",
+      "schemaId": "schema",
+      "typeName": "error-response"    
+    }
+  ]
+}

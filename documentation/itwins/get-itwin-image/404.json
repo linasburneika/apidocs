@@ -1,0 +1,13 @@
+{
+    "statusCode": 404,
+    "description": "This response indicates that the specified iTwin was not found.",
+    "headers": [],
+    "representations": [
+      {
+        "contentType": "application/json",
+        "sample": "",
+        "schemaId": "common-errors",
+        "typeName": "ErrorResponse"
+      }
+    ]
+  }

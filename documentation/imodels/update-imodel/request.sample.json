@@ -1,0 +1,14 @@
+{
+    "name": "Sun City Renewable-energy Plant",
+    "description": "Overall model of wind and solar farms in Sun City",
+    "extent": {
+        "southWest":{
+            "latitude": 46.13267702834806,
+            "longitude": 7.672120009938448
+            },
+        "northEast":{
+            "latitude": 46.302763954781234,
+            "longitude": 7.835541640797823
+        }
+    }
+}

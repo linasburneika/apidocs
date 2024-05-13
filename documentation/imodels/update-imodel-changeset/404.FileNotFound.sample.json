@@ -1,0 +1,6 @@
+{
+    "error": {
+        "code": "FileNotFound",
+        "message": "Requested file is not available. File was not uploaded to file storage."
+    }
+}

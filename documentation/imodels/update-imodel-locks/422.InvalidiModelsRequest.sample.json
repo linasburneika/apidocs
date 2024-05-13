@@ -1,0 +1,22 @@
+{
+    "error": {
+        "code": "InvalidiModelsRequest",
+        "message": "Cannot update Locks.",
+        "details": [
+            {
+                "code": "InvalidValue",
+                "message": "Provided 'briefcaseId' value is not valid. Expected a value of type 'integer'.",
+                "target": "BriefcaseId"
+            },
+            {
+                "code": "MissingRequiredProperty",
+                "message": "Required property is missing.",
+                "target": "BriefcaseId"
+            },
+            {
+                "code": "InvalidRequestBody",
+                "message": "Failed to parse request body. Make sure it is a valid JSON."
+            }
+        ]
+    }
+}

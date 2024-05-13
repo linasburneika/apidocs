@@ -1,0 +1,13 @@
+{
+    "statusCode": 409,
+    "description": "File size specified during iModel creation does not match the actual file size of the uploaded file.",
+    "headers": [],
+    "representations": [
+        {
+            "contentType": "application/json",
+            "sample": "",
+            "schemaId": "common-errors",
+            "typeName": "ErrorResponse"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "statusCode": 201,
+    "description": "Created",
+    "headers": [],
+    "representations": [
+        {
+              "contentType": "application/json;Empty iModel",
+              "sample": "EmptyiModel",
+              "schemaId": "v1-schema",
+              "typeName": "CreatediModelResponse"
+        },
+        {
+              "contentType": "application/json;iModel from Template",
+              "sample": "FromTemplate",
+              "schemaId": "v1-schema",
+              "typeName": "CreatediModelResponse"
+        },
+        {
+            "contentType": "application/json;iModel from Baseline File",
+            "sample": "FromBaselineFile",
+            "schemaId": "v1-schema",
+            "typeName": "CreatediModelResponse"
+        }
+    ]
+}

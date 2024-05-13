@@ -1,0 +1,9 @@
+{
+    "name": "Content-Type",
+    "description": "Indicates request body content type. Supported media type is `application/json`.",
+    "type": "string",
+    "required": false,
+    "values": [
+      "application/json"
+    ]
+}

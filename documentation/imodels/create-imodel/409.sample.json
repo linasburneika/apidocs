@@ -1,0 +1,6 @@
+{
+    "error": {
+        "code": "iModelExists",
+        "message": "iModel with the same name already exists within the iTwin."
+        }
+}

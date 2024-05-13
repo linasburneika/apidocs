@@ -1,0 +1,13 @@
+{
+    "statusCode": 200,
+    "description": "OK",
+    "headers": [],
+    "representations": [
+      {
+        "contentType": "image/png",
+        "sample": "",
+        "schemaId": "v1-schema",
+        "typeName": "image"
+      }
+    ]
+  }

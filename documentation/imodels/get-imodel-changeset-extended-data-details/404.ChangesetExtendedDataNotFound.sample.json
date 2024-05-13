@@ -1,0 +1,6 @@
+{
+    "error": {
+        "code": "ChangesetExtendedDataNotFound",
+        "message": "Requested Changeset Extended Data is not available."
+    }
+}

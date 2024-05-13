@@ -1,0 +1,29 @@
+{
+    "shares": [
+        {
+            "id": "846e5f15-ac4a-4971-8160-580d95624f81",
+            "displayName": "iModel Share name",
+            "name": "iModel Share name",
+            "expiresAt": "2020-10-20T10:51:33.1700000Z",
+            "permission": "imodels_webview"
+        },
+        {
+            "id": "364cff22-47a0-4aaa-a089-a95748078ff8",
+            "displayName": "Second iModel Share name",
+            "name": "Second iModel Share name",
+            "expiresAt": "2020-10-22T12:51:44.1904400Z",
+            "permission": "imodels_read"
+        }
+    ],
+    "_links": {
+        "self": {
+            "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/shares?$skip=0&$top=100"
+        },
+        "prev": {
+            "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/shares?$skip=0&$top=100"
+        },
+        "next": {
+            "href": "https://api.bentley.com/imodels/5e19bee0-3aea-4355-a9f0-c6df9989ee7d/shares?$skip=100&$top=100"
+        }
+    }
+}

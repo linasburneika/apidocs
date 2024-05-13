@@ -1,0 +1,6 @@
+{
+  "error": {
+    "code": "RealityDataNotFound",
+    "message": "Requested reality data is not available."
+  }
+}

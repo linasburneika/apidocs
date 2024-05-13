@@ -1,0 +1,22 @@
+{
+  "representations": [
+    {
+      "contentType": "application/json",
+      "sample": "ChangesetId",
+      "schemaId": "v1-schema",
+      "typeName": "ForkiModel"
+    },
+    {
+      "contentType": "application/json",
+      "sample": "ChangesetIndex",
+      "schemaId": "v1-schema",
+      "typeName": "ForkiModel"
+    },
+    {
+      "contentType": "application/json",
+      "sample": "iTwinIdOnly",
+      "schemaId": "v1-schema",
+      "typeName": "ForkiModel"
+    }
+  ]
+}
