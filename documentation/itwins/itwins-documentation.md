@@ -57,7 +57,7 @@ All iTwins are comprised of the same set of attributes and capabilities.  Develo
 iTwins can be related to other iTwins using a parent-child relationship.  Some common or recommended relationship hierarchies are listed below..
 
 <ul> 
-<li>Portfolio
+<li>Portfolio</li>
 <ul> 
 <li style="list-style-type: none;">Asset</li> 
 <li style="list-style-type: none;">Program</li> 
