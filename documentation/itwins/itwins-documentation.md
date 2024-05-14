@@ -63,17 +63,17 @@ iTwins can be related to other iTwins using a parent-child relationship.  Some c
 <li style="list-style-type: none;">Program</li> 
 <li style="list-style-type: none;">Project</li> 
 </ul>
-<li>Asset
+<li>Asset</li>
 <ul> 
 <li style="list-style-type: none;">Program</li> 
 <li style="list-style-type: none;">Project</li> 
 </ul>
-<li>Program
+<li>Program</li>
 <ul> 
 <li style="list-style-type: none;">Project</li> 
 <li style="list-style-type: none;">WorkPackage</li> 
 </ul>
-<li>Project
+<li>Project</li>
 <ul> 
 <li style="list-style-type: none;">WorkPackage</li> 
 </ul>
