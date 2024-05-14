@@ -90,7 +90,6 @@ There is a special iTwin SubClass named Account. An Account iTwin is created aut
                iTwin BB
                     iTwin B1
                     iTwin B2
-					
 </pre>
 
 There is an API for getting the Account of an iTwin no matter where it exists in the hierarchy. You could use this [API](https://developer.bentley.com/apis/itwins/operations/get-itwin-account/) to find out that iTwin B1 is owned by Acme Corp.  There is an iTwinAccountId property on every iTwin that allows you to query for iTwins owned by Acme Corp. This is useful since you could have access to iTwins in different organizations.
