@@ -83,13 +83,14 @@ iTwins can be related to other iTwins using a parent-child relationship.  Some c
 
 There is a special iTwin SubClass named Account. An Account iTwin is created automatically for each organization and serves as the root of the hierarchy for all iTwins created by that organization.  The organization that owns the Account will also own all iTwins under the Account. 
 
-<pre>    Account: Acme Corp.
-          iTwin XYZ
-          iTwin ABC
-               iTwin AA
-               iTwin BB
-                    iTwin B1
-                    iTwin B2
+<pre>    
+Account: Acme Corp.
+  iTwin XYZ
+  iTwin ABC
+        iTwin AA
+        iTwin BB
+            iTwin B1
+            iTwin B2
 </pre>
 
 There is an API for getting the Account of an iTwin no matter where it exists in the hierarchy. You could use this [API](https://developer.bentley.com/apis/itwins/operations/get-itwin-account/) to find out that iTwin B1 is owned by Acme Corp.  There is an iTwinAccountId property on every iTwin that allows you to query for iTwins owned by Acme Corp. This is useful since you could have access to iTwins in different organizations.
