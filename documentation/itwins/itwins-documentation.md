@@ -59,23 +59,23 @@ iTwins can be related to other iTwins using a parent-child relationship.  Some c
 <ul> 
 <li>Portfolio</li>
 <ul> 
-<li style="list-style-type: none;">Asset</li> 
-<li style="list-style-type: none;">Program</li> 
-<li style="list-style-type: none;">Project</li> 
+<li>Asset</li> 
+<li>Program</li> 
+<li>Project</li> 
 </ul>
 <li>Asset</li>
 <ul> 
-<li style="list-style-type: none;">Program</li> 
-<li style="list-style-type: none;">Project</li> 
+<li>Program</li> 
+<li>Project</li> 
 </ul>
 <li>Program</li>
 <ul> 
-<li style="list-style-type: none;">Project</li> 
-<li style="list-style-type: none;">WorkPackage</li> 
+<li>Project</li> 
+<li>WorkPackage</li> 
 </ul>
 <li>Project</li>
 <ul> 
-<li style="list-style-type: none;">WorkPackage</li> 
+<li>WorkPackage</li> 
 </ul>
 </ul>
 
